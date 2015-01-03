@@ -13,27 +13,27 @@
     </div>
 </div>
 #+END_HTML
-* [[file:pages/1_Lesson.html][Week 1 - Random and Pseudorandom]]
+* [[file:pages/1_Lesson.html][Week 1 - Encryption, Decryption and Keys]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
-* [[file:pages/2_Lesson.html][Week 2 - Pull Down Resistors]]
+* [[file:pages/2_Lesson.html][Week 2 - ]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
-* [[file:pages/3_Lesson.html][Week 3 - Circuit Design and Programming]]
+* [[file:pages/3_Lesson.html][Week 3 - ]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:      
-* [[file:pages/4_Lesson.html][Week 4 - Soldering the PCB]]
+* [[file:pages/4_Lesson.html][Week 4 - ]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:      
-* [[file:pages/5_Lesson.html][Week 5 - Assembling the Housing]]
+* [[file:pages/5_Lesson.html][Week 5 - ]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:    
-* [[file:pages/5_Lesson.html][Week 6 - Designing a 3D Die]]
+* [[file:pages/5_Lesson.html][Week 6 - ]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
