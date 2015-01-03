@@ -1,0 +1,43 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="pages/css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil  toc:nil
+#+TITLE: The Digital Die
+#+AUTHOR: Marc Scott
+
+
+#+BEGIN_HTML
+<div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+        <a href="https://github.com/MarcScott/8-CS-Die">Fork me on GitHub</a>
+    </div>
+</div>
+#+END_HTML
+* [[file:pages/1_Lesson.html][Week 1 - Random and Pseudorandom]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:
+* [[file:pages/2_Lesson.html][Week 2 - Pull Down Resistors]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:
+* [[file:pages/3_Lesson.html][Week 3 - Circuit Design and Programming]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:      
+* [[file:pages/4_Lesson.html][Week 4 - Soldering the PCB]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:      
+* [[file:pages/5_Lesson.html][Week 5 - Assembling the Housing]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:    
+* [[file:pages/5_Lesson.html][Week 6 - Designing a 3D Die]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:
+* [[file:pages/assessment.html][Assessment]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:

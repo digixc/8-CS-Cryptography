@@ -1,0 +1,4 @@
+* The Digital Die
+- Source files in org-mode in source directory if you wish to submit pull request. Please don't edit the html
+- Scheme can be viewed at [[http://www.bournetoinvent.com/projects/8-SC-DigitalDie][bournetoinvent.com]]
+
