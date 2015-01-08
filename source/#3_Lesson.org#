@@ -1,0 +1,252 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
+
+#+TITLE: Cryptography
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/MarcScott/8-CS-Cryptography">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+
+    </ul>
+  </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Why is Cryptography important?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+[[https://commons.wikimedia.org/wiki/Category:Cryptography#mediaviewer/File:Encrypt.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Cryptography is not just for spies and secret agents. We all use cryptography, every day.
+- There are lots of apps and websites that use cryptography to communicate between clients and servers.
+- Public Key Cryptography is very complicated, but here is a quick outline of how it works.
+  1. If you are on an https:// website or you see the little green padlock in your URL bar, you are communicating with a website using a type of public key cryptography called SSL/TLS
+  2. When you connect to the website server, the server sends you it's public key.
+  3. Your client machine then generates a random number to use as a session key. This random number is encrypted with the public key and sent to the server.
+  4. The server decrypts the random number with it's private key. As only the server has the private key, only it can decrypt the session key.
+  5. Now only the client and server have the unique session key. They can use this to encrypt data and send it between them, knowing only the client and server can decrypt the messages
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Draw a diagram to show how SSL/TLS encryption works, using the characters Alice, Bob and Eve.
+- Here's an example of the type of diagram, although this is just for basic encryption.
+[[https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Asymmetric_cryptography_-_step_2.svg/640px-Asymmetric_cryptography_-_step_2.svg.png]]
+* SnapChat
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- Let's have a look at some basics of cryptography by looking at the popular app - SnapChat.
+
+  1. When you install the SnapChat app on your phone, you get SnapChat's public key.
+  2. When you send a SnapChat, your phone uses this key to encrypt your message/photo.
+  3. The ciphertext is then sent to SnapChat's servers, where the message is decrypted using SnapChat's private key.
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Storing Passwords
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+http://cdni.wired.co.uk/1240x826/o_r/password_1.jpg
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Passwords are an annoying but neccessary security measure.
+- Sometimes passwords are used to authenticate you (prove you are who you say you are) and other times they are used as keys in encryption (like in the "bacon" example in the video on Vigenere Cipher).
+- Have you ever thought how password authentication works?
+- At a login form, you type in your username and password and the website can somehow check that the password you typed in is the correct one.
+- But how does it know?
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+http://help.37signals.com/attachments/images/442/scaled/Forgot%20your%20password%3F.png
+- Have you ever forgotten your password to a website?
+- Most websites have a link that you can click if you've forgotten your password.
+- One of two things then tends to happen...
+  1. The website emails you your password
+  2. The website emails you a link to reset your password.
+- You might find the latter option to be annoying, as you have to think up a new password, but if the site has emailed you back your password, that means they must have it stored somewhere as =Plaintext=.
+- It is a bad idea to store users' passwords in Plaintext. If a site gets hacked then the crackers will have access to eveyone's password.
+- For this reason, websites tend not to store passwords. Instead your password is encrypted using a =Cryptographic Hash Function=.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- We're going to use a simple but unsafe Hashing algorithm that could be used to check passwords.
+- Think of a password you might use for a website. It must only contain letters and numbers (no puntuation or spaces).
+- Write out your password on some paper or a text document.
+- e.g.
+#+BEGIN_EXAMPLE
+h0rs3batt3rystapl3
+#+END_EXAMPLE
+- Underneath the password, write down the value for each letter with A = 0 and Z = 25, numbers retain their origininal value.
+#+BEGIN_EXAMPLE
+h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
+7 0 17 18 3 1 0 19 19 3 17 24 18 19 0 15 11 3 
+#+END_EXAMPLE
+-Next add up all the digits of the numbers
+#+BEGIN_EXAMPLE
+7+0+1+7+1+8+3+1+0+1+9+1+9+3+1+7+2+4+1+8+1+9+0+1+5+1+1+3
+=95
+#+END_EXAMPLE
+- Then keep adding the digits until you end up with a single digit number.
+#+BEGIN_EXAMPLE
+9+5
+=14
+1+4
+=5
+#+END_EXAMPLE
+- So the has (by this method) of h0rs3batt3rystapl3 is =5=
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- For most website authentication, they store you hashed password. In the above example they would store a 5.
+- When you want to login, you type in your password and it is instantly hashed and then compared to the hash in the server's database.
+- It's very easy for the computer to check that h0rs3batt3rystapl3 is hashed to 5, but impossible for a hacker to reverse the 5 and figure out your password is h0rs3batt3rystapl3.
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Write down the password and hash that you worked out in the /Try it/ section above. Then find out the passwords and hashes for 5 of your friends and write them down as well.
+- In your own words, why would it not be a good idea for a website to use the hashing alogrithm we used above to hash passwords?
+
+  
