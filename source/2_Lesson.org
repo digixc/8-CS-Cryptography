@@ -189,7 +189,7 @@
 :END:
 - Go back to your script and declare a new variable called =shiftedAlphabet=
 - Set it to a shifted Alphabet, as used in the Caesar Cipher. =ghijklmnopqrstuvwxyzabcdef= for instance.
-- We'll also need a plaintext message to encrypt. Let's keep it simple for now and use a single word. Declare a variable called =plainText= and set it to the string ='hello'= (all lowercase)
+- We'll also need a plaintext message to encrypt. Let's keep it simple for now and use a single word. Declare a variable called =plainText= and set it to the string 'hello' (all lowercase)
 - Lastly we'll need an empty string for our ciphertext.
 #+BEGIN_SRC python
   cipherText=""
