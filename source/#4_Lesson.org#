@@ -99,7 +99,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
 - In the last lesson we looked at why using an MD5 hash to store passwords was a bad idea.
 - A simple Google search for common hashes will often tell us the password.
 - But are there other hashing algorithms that are any better
@@ -107,7 +106,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
 :END:
-
 ** Design It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: design

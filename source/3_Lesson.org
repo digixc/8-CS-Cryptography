@@ -109,8 +109,8 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-[[file:img/passwords2.png]]
 - Have you ever forgotten your password to a website?
+[[file:img/passwords2.png]]
 - Most websites have a link that you can click if you've forgotten your password.
 - One of two things then tends to happen...
   1. The website emails you your password
@@ -151,9 +151,9 @@ h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- For most website authentication, they store you hashed password. In the above example they would store a 5.
+- Most websites store your hashed password. In the above example they would store a 5.
 - When you want to login, you type in your password and it is instantly hashed and then compared to the hash in the server's database.
-- It's very easy for the computer to check that h0rs3batt3rystapl3 is hashed to 5, but impossible for a hacker to reverse the 5 and figure out your password is h0rs3batt3rystapl3.
+- It's very easy for the computer to check that h0rs3batt3rystapl3 is hashed to 5, but impossible for a cracker to reverse the 5 and figure out your password is h0rs3batt3rystapl3.
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -168,8 +168,6 @@ h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
 |      |          |      |
 |      |          |      |
 - In your own words, why would it _not_ be a good idea for a website to use the hashing algorithm we used above to hash passwords?
-
-  
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -202,9 +200,8 @@ h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:      
-
 - Open up IDLE on your computer.
-- We're not going to 
+- We're not going to try an implement the MD5 algorithm ourselves, as that would be pretty tricky. Luckily it's already been done for us and available in Python.
 - We'll need to import a library to use the MD5 hashing algorithm and then a single line of code.
 - Write this in your interpreter.
 #+BEGIN_SRC python
@@ -244,7 +241,6 @@ random.random()
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
 - Use the MD5 hashing algorithm to find the unsalted hashes of some common passwords that people might use e.g qwerty
 - Identify hashes can be reversed with a simple Google search.
 - Use the examples you have generated along with what you have learned in this lesson to write up a document giving advice to users on why they should use strong and unique passwords on websites, and why their password hints should not be directly related to their password.
