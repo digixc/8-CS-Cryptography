@@ -292,7 +292,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #268bd2;">trueAlphabet</span> = <span style="color: #2aa198;">'abcdefghijklmnopqrstuvwxyz'</span>
+<pre class="src src-python"><span style="color: #6c71c4;">trueAlphabet</span> = <span style="color: #2aa198;">'abcdefghijklmnopqrstuvwxyz'</span>
 </pre>
 </div>
 <ul class="org-ul">
@@ -336,7 +336,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #268bd2;">cipherText</span>=<span style="color: #2aa198;">""</span>
+<pre class="src src-python"><span style="color: #6c71c4;">cipherText</span>=<span style="color: #2aa198;">""</span>
 </pre>
 </div>
 </div>
@@ -455,10 +455,10 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #268bd2;">trueAlphabet</span> = <span style="color: #2aa198;">'abcdefghijklmnopqrstuvwxyz'</span>
-<span style="color: #268bd2;">shiftedAlphabet</span> = <span style="color: #2aa198;">'defghijklmnoqprstuvwxyzabc'</span>
-<span style="color: #268bd2;">plainText</span> = <span style="color: #2aa198;">'hello'</span>
-<span style="color: #268bd2;">cipherText</span> = <span style="color: #2aa198;">''</span>
+<pre class="src src-python"><span style="color: #6c71c4;">trueAlphabet</span> = <span style="color: #2aa198;">'abcdefghijklmnopqrstuvwxyz'</span>
+<span style="color: #6c71c4;">shiftedAlphabet</span> = <span style="color: #2aa198;">'defghijklmnoqprstuvwxyzabc'</span>
+<span style="color: #6c71c4;">plainText</span> = <span style="color: #2aa198;">'hello'</span>
+<span style="color: #6c71c4;">cipherText</span> = <span style="color: #2aa198;">''</span>
 
 <span style="color: #859900;">for</span> letter <span style="color: #859900;">in</span> trueAlphabet:
     <span style="color: #859900;">print</span>(letter)
@@ -537,7 +537,7 @@ trueAlphabet.index(<span style="color: #2aa198;">'f'</span>)
 <div class="org-src-container">
 
 <pre class="src src-python"><span style="color: #859900;">for</span> letter <span style="color: #859900;">in</span> plainText:
-    <span style="color: #268bd2;">position</span> = trueAlphabet.index(letter)
+    <span style="color: #6c71c4;">position</span> = trueAlphabet.index(letter)
     <span style="color: #859900;">print</span>(position)
 </pre>
 </div>
@@ -548,8 +548,8 @@ trueAlphabet.index(<span style="color: #2aa198;">'f'</span>)
 <div class="org-src-container">
 
 <pre class="src src-python"><span style="color: #859900;">for</span> letter <span style="color: #859900;">in</span> plainText:
-    <span style="color: #268bd2;">position</span> = trueAlphabet.index(letter)
-    shiftedLetter - shiftedAlphabet[position]
+    <span style="color: #6c71c4;">position</span> = trueAlphabet.index(letter)
+    <span style="color: #6c71c4;">shiftedLetter</span> = shiftedAlphabet[position]
 </pre>
 </div>
 <ul class="org-ul">
@@ -559,9 +559,9 @@ trueAlphabet.index(<span style="color: #2aa198;">'f'</span>)
 <div class="org-src-container">
 
 <pre class="src src-python"><span style="color: #859900;">for</span> letter <span style="color: #859900;">in</span> plainText:
-    <span style="color: #268bd2;">position</span> = trueAlphabet.index(letter)
-    shiftedLetter - shiftedAlphabet[position]
-    <span style="color: #268bd2;">cipherText</span> = cipherText + shiftedLetter
+    <span style="color: #6c71c4;">position</span> = trueAlphabet.index(letter)
+    <span style="color: #6c71c4;">shiftedLetter</span> = shiftedAlphabet[position]
+    <span style="color: #6c71c4;">cipherText</span> = cipherText + shiftedLetter
 <span style="color: #859900;">print</span>(cipherText)
 </pre>
 </div>

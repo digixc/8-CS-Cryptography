@@ -319,13 +319,13 @@ trueAlphabet.index('f')
 #+BEGIN_SRC python
   for letter in plainText:
       position = trueAlphabet.index(letter)
-      shiftedLetter - shiftedAlphabet[position]
+      shiftedLetter = shiftedAlphabet[position]
 #+END_SRC
 - Then we can add that shifted letter to the end of the cipher text.
 #+BEGIN_SRC python
   for letter in plainText:
       position = trueAlphabet.index(letter)
-      shiftedLetter - shiftedAlphabet[position]
+      shiftedLetter = shiftedAlphabet[position]
       cipherText = cipherText + shiftedLetter
   print(cipherText)
 #+END_SRC

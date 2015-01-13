@@ -176,7 +176,7 @@ qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Create a new file called forLoops.py
-- For each of the =for= loops above, descrive what they print out.
+- For each of the =for= loops above, describe what they print out.
 - Construct =for= loops to print out the following.
   1. All the numbers from 1 to 1000
   2. All the even numbers from 100 to 200
@@ -327,7 +327,7 @@ IndexError: string index out of range
 :HTML_CONTAINER_CLASS: try
 :END:
 - So what does =string index out of range= mean?
-- Let's go back to the /interpreter/ to try and see if we can reporduce the error.
+- Let's go back to the /interpreter/ to try and see if we can reproduce the error.
 #+begin_src python
 myString = 'abcdefg'
 myString[3]
