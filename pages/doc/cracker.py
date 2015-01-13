@@ -1,18 +1,18 @@
 import hashlib
 import binascii
-hashedPassword='2b058ab133ff919bb39ebf7ceb1c13e5'
+hashedPassword=b'@K1$^M^J4K:^0H.\\&!<YXP&=$5FJ5RNJBFM?-=-Q=+7, \n'
 
 with open('passwords.txt','r') as textFile:
         passwordList = textFile.read()
 
 passwords = passwordList.split('\n')
 
-hashlib.pbkdf2_hmac('sha256', b'password', b'salt', 100000)
+hashlib.pbkdf2_hmac('sha256', b'password', b'', 1)
 
 for password in passwords:
-        hashed = hashlib.pbkdf2_hmac('sha256',bytes(password,'utf-8'),b'salt',10000)
-        #hashed = hashlib.md5(password.encode('utf-8')).hexdigest()
-        if hashed == hashedPassword:
+        hashed = hashlib.pbkdf2_hmac('sha256',bytes(password,'utf-8'),b'',1000)
+        asciiHashed = binascii.b2a_uu(hashed)
+        if asciiHashed == hashedPassword:
                 print('Password is '+password)
                 break
         
