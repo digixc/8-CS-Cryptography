@@ -170,6 +170,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- David Cameron uses a Blackberry phone.
 [[file:img/cameron.jpeg]]
 - On the 12th of January, 2015, in the wake of the attack on the offices of [[http://en.wikipedia.org/wiki/Charlie_Hebdo][Charlie Hebdo]] in Paris, the British Prime Minister, David Cameron, said the following.
 #+BEGIN_QUOTE
