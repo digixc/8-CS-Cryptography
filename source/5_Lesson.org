@@ -117,8 +117,6 @@
 - Draw a diagram to show how SSL/TLS encryption works, using the characters Alice, Bob and Eve.
 - Here's an example of the type of diagram, although this is just for basic encryption.
 [[https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Asymmetric_cryptography_-_step_2.svg/640px-Asymmetric_cryptography_-_step_2.svg.png]]
-
-
 * The encryption debate
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -139,7 +137,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
 - What this means, is that it is very easy for people to communicate with each other, using encrypted messages that are basically impossible for anyone else to read (so long as you use strong passwords).
 - Who might want to communicate using such strong encryption?
   1. Members of the armed forces wishing to make sure the enemy can't read their messages.
