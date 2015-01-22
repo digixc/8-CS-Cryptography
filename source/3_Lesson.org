@@ -215,7 +215,7 @@ print(hashlib.md5("A random password goes here".encode('utf-8')).hexdigest())
 :END:
 - So using the MD5 Hashing algorithm we can get what seems to be an irreversible hash of strings.
 - Let's try what Tom Scott suggests in the video though.
-- Generate the MD5 hash for the string 'Password'
+- Generate the MD5 hash for the string 'qwerty123456'
 - Now copy and paste the output into a Google Search box and see what results you get back
 - Now let's try salting the password.
 ** Code It
@@ -244,3 +244,4 @@ random.random()
 - Use the MD5 hashing algorithm to find the unsalted hashes of some common passwords that people might use e.g qwerty
 - Identify hashes can be reversed with a simple Google search.
 - Use the examples you have generated along with what you have learned in this lesson to write up a document giving advice to users on why they should use strong and unique passwords on websites, and why their password hints should not be directly related to their password.
+  
