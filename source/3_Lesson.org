@@ -237,7 +237,7 @@ random.random()
 - =password0.2820163283196919= for instance produces =5c9b95def2914a66063f67ee0255e47e=
 - Now try searching for the hash you produced on Google.
 - Hopefully you can now see why salting passwords is so important.
-** Badge It - Gold
+** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:

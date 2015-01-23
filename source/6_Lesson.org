@@ -99,9 +99,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
 - Last lesson you learned a little about public key cryptography
-- Last lesson you learned about public key cryptography.
 - To recap, public key cryptography involves two keys - a public and a private key.
 - Anyone can encrypt a message using the public key.
 - Only the holder of the private key can decrypt the message.
