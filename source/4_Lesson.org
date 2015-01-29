@@ -129,7 +129,7 @@ dqbzdb wkh vhfuhw phvvdjh lv, qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq
 :HTML_CONTAINER_CLASS: code
 :END:
 - Let's start with a couple of variables with the information we need.
-- Open up a new python file (CC-decrypt.py) in IDLE and add the following lines of code.
+- Open up a new python file (CC-crack.py) in IDLE and add the following lines of code.
 #+BEGIN_SRC python
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 cipherText = '''odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr 
@@ -141,7 +141,7 @@ qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: design
 :END:
-- The algorithm for this isn't to complicated.
+- The algorithm for this isn't too complicated.
 - We're basically going to try all 25 possible shift values on the secret message.
 ** Learn It
 :PROPERTIES:
