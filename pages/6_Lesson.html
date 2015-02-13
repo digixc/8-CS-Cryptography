@@ -208,10 +208,10 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #93a1a1; font-style: italic;">#</span><span style="color: #93a1a1; font-style: italic;">Choose three primes</span>
-<span style="color: #6c71c4;">prime1</span> =
-<span style="color: #6c71c4;">prime2</span> =
-<span style="color: #6c71c4;">prime3</span> =
+<pre class="src src-python"><span style="color: #cd0000;">#</span><span style="color: #cd0000;">Choose three primes</span>
+<span style="color: #cdcd00;">prime1</span> =
+<span style="color: #cdcd00;">prime2</span> =
+<span style="color: #cdcd00;">prime3</span> =
 </pre>
 </div>
 <ul class="org-ul">
@@ -224,9 +224,9 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #93a1a1; font-style: italic;">#</span><span style="color: #93a1a1; font-style: italic;">Create the public key</span>
-<span style="color: #6c71c4;">publicKey</span> = (prime1*prime2,prime3)
-<span style="color: #859900;">print</span>(<span style="color: #2aa198;">'Your public key is'</span>, publicKey,<span style="color: #2aa198;">'.You can share this with your friends'</span>)
+<pre class="src src-python"><span style="color: #cd0000;">#</span><span style="color: #cd0000;">Create the public key</span>
+<span style="color: #cdcd00;">publicKey</span> = (prime1*prime2,prime3)
+<span style="color: #00cdcd; font-weight: bold;">print</span>(<span style="color: #00cd00;">'Your public key is'</span>, publicKey,<span style="color: #00cd00;">'.You can share this with your friends'</span>)
 </pre>
 </div>
 <ul class="org-ul">
@@ -297,7 +297,7 @@ for the JavaScript code in this tag.
 </li>
 <li>To calculate the totient function of the number 10, first list all the numbers below it.
 <ul class="org-ul">
-<li><code>9,8,7,6,5,4,3,2</code>
+<li><code>9,8,7,6,5,4,3,2,1</code>
 </li>
 </ul>
 </li>
@@ -323,7 +323,7 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
-<li>So counting up we have 3 coprimes, so the totient function of 10 is 4
+<li>So counting up we have 4 coprimes, so the totient function of 10 is 4
 </li>
 </ul>
 </div>
@@ -370,8 +370,8 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">phi1</span> = prime1 - 1
-<span style="color: #6c71c4;">phi2</span> = prime2 - 1
+<pre class="src src-python"><span style="color: #cdcd00;">phi1</span> = prime1 - 1
+<span style="color: #cdcd00;">phi2</span> = prime2 - 1
 </pre>
 </div>
 </div>
@@ -420,8 +420,8 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">for</span> d <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(phi1*phi2):
-    <span style="color: #859900;">print</span>(d)
+<pre class="src src-python"><span style="color: #00cdcd; font-weight: bold;">for</span> d <span style="color: #00cdcd; font-weight: bold;">in</span> <span style="color: #0000ee; font-weight: bold;">range</span>(phi1*phi2):
+    <span style="color: #00cdcd; font-weight: bold;">print</span>(d)
 </pre>
 </div>
 <ul class="org-ul">
@@ -434,8 +434,8 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">for</span> d <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(1,phi1*phi2):
-    <span style="color: #859900;">print</span>(d)
+<pre class="src src-python"><span style="color: #00cdcd; font-weight: bold;">for</span> d <span style="color: #00cdcd; font-weight: bold;">in</span> <span style="color: #0000ee; font-weight: bold;">range</span>(1,phi1*phi2):
+    <span style="color: #00cdcd; font-weight: bold;">print</span>(d)
 </pre>
 </div>
 <ul class="org-ul">
@@ -446,9 +446,9 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">for</span> d <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(1,phi1*phi2):
-    <span style="color: #859900;">if</span> (d * prime3)%(phi1 * phi2) == 1:
-        <span style="color: #859900;">print</span>(d)
+<pre class="src src-python"><span style="color: #00cdcd; font-weight: bold;">for</span> d <span style="color: #00cdcd; font-weight: bold;">in</span> <span style="color: #0000ee; font-weight: bold;">range</span>(1,phi1*phi2):
+    <span style="color: #00cdcd; font-weight: bold;">if</span> (d * prime3)%(phi1 * phi2) == 1:
+        <span style="color: #00cdcd; font-weight: bold;">print</span>(d)
 </pre>
 </div>
 <ul class="org-ul">
@@ -459,10 +459,10 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">for</span> d <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(1,phi1*phi2):
-    <span style="color: #859900;">if</span> (d * prime3)%(phi1 * phi2) == 1:
-        <span style="color: #859900;">print</span>(d)
-        <span style="color: #859900;">break</span>
+<pre class="src src-python"><span style="color: #00cdcd; font-weight: bold;">for</span> d <span style="color: #00cdcd; font-weight: bold;">in</span> <span style="color: #0000ee; font-weight: bold;">range</span>(1,phi1*phi2):
+    <span style="color: #00cdcd; font-weight: bold;">if</span> (d * prime3)%(phi1 * phi2) == 1:
+        <span style="color: #00cdcd; font-weight: bold;">print</span>(d)
+        <span style="color: #00cdcd; font-weight: bold;">break</span>
 </pre>
 </div>
 <ul class="org-ul">
@@ -471,11 +471,11 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">for</span> d <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(1,phi*phi2):
-    <span style="color: #859900;">if</span> (d * prime3)%(phi1 * phi2) == 1:
-        <span style="color: #6c71c4;">privateKey</span> = prime1*prime2,d
-        <span style="color: #859900;">break</span>
-<span style="color: #859900;">print</span>(<span style="color: #2aa198;">'Your private key is'</span>,privateKey)
+<pre class="src src-python"><span style="color: #00cdcd; font-weight: bold;">for</span> d <span style="color: #00cdcd; font-weight: bold;">in</span> <span style="color: #0000ee; font-weight: bold;">range</span>(1,phi1*phi2):
+    <span style="color: #00cdcd; font-weight: bold;">if</span> (d * prime3)%(phi1 * phi2) == 1:
+        <span style="color: #cdcd00;">privateKey</span> = prime1*prime2,d
+        <span style="color: #00cdcd; font-weight: bold;">break</span>
+<span style="color: #00cdcd; font-weight: bold;">print</span>(<span style="color: #00cd00;">'Your private key is'</span>,privateKey)
 </pre>
 </div>
 <ul class="org-ul">
