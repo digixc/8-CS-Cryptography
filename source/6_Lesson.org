@@ -7,12 +7,12 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Marc Scott
+#+AUTHOR: Clinton Delport
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-CS-Cryptography">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -100,7 +100,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Last lesson you learned a little about public key cryptography
+- Last lesson you learned a little about public key cryptography.
 - To recap, public key cryptography involves two keys - a public and a private key.
 - Anyone can encrypt a message using the public key.
 - Only the holder of the private key can decrypt the message.
@@ -111,7 +111,7 @@
 - Public Key cryptography relies on prime numbers.
 - Prime numbers are numbers that are only divisible by 1 and themselves.
 - So the first few primes are 2,3,5,7,11.
-- And [[http://primes.utm.edu/lists/small/1000.txt][here is a list of the first 1000 primes]]
+- And [[http://primes.utm.edu/lists/small/1000.txt][here is a list of the first 1000 primes]].
 - We're going to implement a _very poor_ version of the RSA encryption algorithm.
 - It would not be a good idea to encrypt data that you really wanted to keep secret using our implementation.
 - You have learned [[http://lmgtfy.com/?q=What+is+the+answer+to+Life%2C+the+Universe+and+Everything][The answer to Life, the Universe and Everything]] and naturally you want to tell a few close friends, but you don't want everyone to know the answer.
@@ -120,14 +120,14 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- The first thing we need to do i pick two prime numbers and a third that is smaller than the other two.
+- The first thing we need to do is pick two prime numbers and a third that is smaller than the other two.
 #+begin_src python
 #Choose three primes
 prime1 =
 prime2 =
 prime3 =
 #+end_src
-- Use the list linked above to choose any three primes _below 100_
+- Use the list linked above to choose any three primes _below 100_.
 - Now we need to generate a public key. This is actually really easy.
 - It's just the product of the first two primes, and the third prime.
 #+begin_src python
@@ -183,7 +183,7 @@ print('Your public key is', publicKey,'.You can share this with your friends')
   - =3 and 10= can only be divided by 1
   - =2 and 10= can be divided ?
   - =1 and 10= can only be divided by 1
-- So counting up we have 4 coprimes, so the totient function of 10 is 4
+- So counting up we have 4 coprimes, so the totient function of 10 is 4.
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -283,12 +283,12 @@ phi2 = prime2 - 1
 :END:
 - Now we have the public and private keys, we can encrypt and decrypt numbers.
 - The algorithm for encryption is as follows.
-  1. Take the secret number you want to encrypt (42)
-  2. Raise it to the power of the second part of your public key
-  3. Calculate the remainder when the result is divided by the first part of your public key
+  1. Take the secret number you want to encrypt (42).
+  2. Raise it to the power of the second part of your public key.
+  3. Calculate the remainder when the result is divided by the first part of your public key.
 - The algorithm for decryption is as follows.
   1. Take the encrypted secret number.
-  2. Raise it to the power of the second part of your private key
+  2. Raise it to the power of the second part of your private key.
   3. Calculate the remainder when the result is divided by the first part of your public key.
 - Try and write two lines of code that will encrypt the number (and save it as =cipherText=) then decrypt =cipherText= and save it as =plainText=.
 - Hints

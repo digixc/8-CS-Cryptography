@@ -6,12 +6,12 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Marc Scott
+#+AUTHOR: Clinton Delport
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-CS-Cryptography">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -240,7 +240,7 @@ ValueError: substring not found
 |---+--------+----------+--------------+---------------|
 | 1 | o      |       14 |           15 | p             |
 | 1 | d      |        3 |            4 | e             |
-** Badge It - Gold part 1
+** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -296,9 +296,9 @@ myLetters = 'abcdefg'
 '?' in myLetters
 #+end_src
 - So we can detect if a character is missing from a string of characters and then use conditionals to make different choices.
-** Badge It - Gold part 2
+** Code It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: code
 :END:
 - Let's try and use what you have learned to make our program work a little better.
 - Use the structured English below to help you build the program in Python.
