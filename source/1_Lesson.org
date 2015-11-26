@@ -6,12 +6,12 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Marc Scott
+#+AUTHOR: Clinton Delport
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-CS-Cryptography">Fork me on GitHub</a>
+      <a href="https://github.com/stsb/8-CS-Cryptography">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -115,12 +115,6 @@
 :END:
 - Assemble yourselves into teams of three.
 - Can two of you manage to write messages to each other in such away that the third member of your group is unable to read the message?
-** Badge It - Silver
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Write up the methods you tried to send the messages secretly.
-- Use a text editor (Sublime Text for instance) and make sure you save the file with the .txt extension
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -146,15 +140,13 @@
 #+BEGIN_HTML
 <iframe width="420" height="315" src="https://www.youtube.com/embed/sMOZf4GN3oc" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
-** Badge It - Gold
+** Badge It - Silver and Gold 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-1) Why is the cipher called the Caesar Cipher?
-2) Why is it known as a Substitution Cipher?
-3) What is meant by the term /Shift/?
-4) What is /Frequency Analysis/?
-5) What is the most commonly used letter in the English language?
+- When you are ready, click *here* to take the quiz.
+- *Silver:* Achieve 4 out of 8
+- *Gold:* Achieve 6 out of 8
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn

@@ -6,12 +6,12 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Marc Scott
+#+AUTHOR: Clinton Delport
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-CS-Cryptography">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -154,9 +154,9 @@ h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
 - Most websites store your hashed password. In the above example they would store a 5.
 - When you want to login, you type in your password and it is instantly hashed and then compared to the hash in the server's database.
 - It's very easy for the computer to check that h0rs3batt3rystapl3 is hashed to 5, but impossible for a cracker to reverse the 5 and figure out your password is h0rs3batt3rystapl3.
-** Badge It - Silver
+** Try it
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: try
 :END:
 - Write down the password and hash that you worked out in the /Try it/ section above. Then find out the passwords and hashes for 5 of your friends and write them down as well.
 | User | Password | Hash |
@@ -177,7 +177,7 @@ h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
 #+BEGIN_HTML
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZtInClXe1Q" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
-** Badge It - Gold
+** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -187,6 +187,8 @@ h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
 3. Why is it a poor idea to save password hints in a database.
 4. What's wrong with just hashing a password?
 5. What is a salt?
+
+- You will be awarded *silver* or *gold* depending on the quality of your answer.
 
 ** Learn It
 :PROPERTIES:

@@ -6,12 +6,12 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Marc Scott
+#+AUTHOR: Clinton Delport
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-CS-Cryptography">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -96,7 +96,7 @@
 :HTML_CONTAINER_CLASS: activity
 :END:
 ** Learn It
-[[https://commons.wikimedia.org/wiki/Category:Cryptography#mediaviewer/File:Encrypt.jpg]]
+[[./img/encrypt.jpg]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
@@ -110,9 +110,9 @@
   5. The server decrypts the /session key/ with it's private key.As only the server has the private key, only it can decrypt the session key.
   6. Now only the client and server have the unique session key. They can use this to encrypt data and send it between them, knowing only the client and server can decrypt the messages
 - SSL/TLS is incredibly important. It's used on all the major social networks, lots of email services and also when we conduct financial transactions online.
-** Badge It - Silver
+** Design It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: design
 :END:
 - Draw a diagram to show how SSL/TLS encryption works, using the characters Alice, Bob and Eve.
 - Here's an example of the type of diagram, although this is just for basic encryption.
@@ -153,9 +153,9 @@
   3. [[http://en.wikipedia.org/wiki/TextSecure][TextSecure]]
 - And here is a score card produced by [[https://www.eff.org/][The EFF]] rating the featured messaging apps, with regards to privacy.
 [[file:img/scorecard.png]]
-** Badge It - Gold
+** Try It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: try
 :END:
 - Look at the [[https://www.eff.org/secure-messaging-scorecard][original EFF score card]] by clicking on the link.
 - List all the apps that you use.
@@ -163,7 +163,7 @@
 - Count up all the ticks, and divide by the number of apps you use.
 - What is the average privacy score for the apps you use?
 - Write a brief paragraph evaluating how private you think your messages are.
-** Badge It - Platinum
+** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -174,7 +174,12 @@
 Are we going to allow a means of communications which it simply isn’t possible to read?
 My answer to that question is: No, we must not.
 #+END_QUOTE
-1. Write a brief description of what you think he means by 'allow a means of communications which it simply isn't possible to read'
-2. Do you agree with David Cameron, that it should be possible for the security services to read all communications, if they have a legal warrant to do so?
-3. Write a couple of paragraphs detailing why you agree or disagree with Cameron's statement.
+- Your overall badge (*silver*, *gold* or *platinum*) will be assigned based on the quality of your response.
+
+
+   1. Write a brief description of what you think he means by 'allow a means of communications which it simply isn't possible to read'
+   2. Do you agree with David Cameron, that it should be possible for the security services to read all communications, if they have a legal warrant to do so?
+   3. Write a couple of paragraphs detailing why you agree or disagree with Cameron's statement.
+
+
 
