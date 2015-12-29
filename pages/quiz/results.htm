@@ -21,10 +21,10 @@
               <td height="25" bgcolor="#D3FFA8"><strong><font face="Arial"># of questions you got right:</font></strong></td>
               <td height="25"><p><input type="text" name="p" size="24" readonly></td>
             </tr>
-       <!--  <tr>
+        <tr>
           <td height="17" bgcolor="#D3FFA8"><strong><font face="Arial">The questions you got wrong:</font></strong></td>
-          <td height="17"><p><textarea name="T2" rows="3" cols="24" wrap="virtual"></textarea></td>
-        </tr> -->
+          <td height="17"><p><textarea name="T2" rows="3" cols="24" wrap="virtual" radonly></textarea></td>
+        </tr>
         <tr>
           <td height="25" bgcolor="#D3FFA8"><strong><font face="Arial">Grade in percentage:</font></strong></td>
           <td height="25"><input type="text" name="q" size="8" readonly></td>
@@ -42,6 +42,7 @@
   <script>
 
   var wrong=0
+  var parse = 0
   for (e=0;e<=2;e++)
     document.result[e].value=""
 
@@ -64,8 +65,8 @@
   </script>
 
   <input type="button" value="Take the quiz again" name="B1"
-  onClick="history.go(-1)">
-</p>
+  onClick="history.go(-1)"> <!-- <input type="button" value="View solution" name="B2"
+  onClick="showsolution()"> --></p>
 </center></div>
 </form>
 
