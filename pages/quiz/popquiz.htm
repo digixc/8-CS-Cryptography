@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<title>JavaScriptKit.com Multiple Choice Quiz Script</title>
+
+<style>
+.qheader{
+font:bold 14px Arial;
+}
+
+.qselections{
+font:normal 13px Arial;
+}
+</style>
+
+<script src="quizconfig.js">
+</script>
+
+<script>
+
+/***********************************************
+* JavaScriptKit.com Multiple Choice Quiz Script (http://www.javascriptkit.com)
+* Copyright 2003 JavaScript Kit- http://www.javascriptkit.com
+* This notice and footnote must stay intact for use
+* Visit JavaScript Kit (http://www.javascriptkit.com/) for full source code
+***********************************************/
+
+var actualchoices=new Array()
+document.cookie="ready=yes"
+</script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<!--Comments on configuring quiz script-->
+<!--Change the questions below any way you want, but make note of the following:-->
+<!--1) Perserve the <FORM> tags -->
+<!--2a) Inside each radio button, use the VALUE attribute to denote each question's choices: "a", "b", "c" etc.-->
+<!--2b) Inside each radio button, use the NAME attribute to denote which question the button belongs to ("question1", "question2" etc-->
+<!--3) Script supports unlmited # of questions. Be sure to edit .js file to enter corresponding solutions-->
+
+<p align="center">
+
+<form method="POST" name="lesson1quiz">
+
+<font face="Arial"><big><big>Encryption, Decryption and Keys Quiz</big></big></font></p>
+
+<div class="qheader">
+1) Which of these is what we called uncoded messages?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question1">a) Simple Text<br>
+<input type="radio" value="b" name="question1">b) Plain text<br>
+<input type="radio" value="c" name="question1">c) Clear text<br>
+<input type="radio" value="d" name="question1">d) Concise text<br>
+</div>
+
+<br>
+
+<div class="qheader">
+2) What do we call a coded message?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question2">a) Encrypted Text<br>
+<input type="radio" value="b" name="question2">b) Tricky Text<br>
+<input type="radio" value="c" name="question2">c) Complex Text<br>
+<input type="radio" value="d" name="question2">d) Cipher Text<br>
+</div>
+
+<br>
+
+<div class="qheader">
+3) What is the process of making a message coded?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question3">a) Encrption<br>
+<input type="radio" value="b" name="question3">b) Decryption<br>
+<input type="radio" value="c" name="question3">c) Iteration<br>
+<input type="radio" value="d" name="question3">d) Concatenation<br>
+</div>
+
+<br>
+
+<div class="qheader">
+4) Why is the cipher called the Caesar Cipher?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question4">a) Named after the salad<br>
+<input type="radio" value="b" name="question4">b) Named after the country of Caesarland<br>
+<input type="radio" value="c" name="question4">c) Named after the Roman Emperor<br>
+<input type="radio" value="d" name="question4">d) Named after the dog trainer<br>
+</div>
+
+<br>
+
+<div class="qheader">
+5) Why is it known as a Substitution Cipher?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question5">a) Each letter is replaced by a difficult to read symbol.<br>
+<input type="radio" value="b" name="question5">b) Plaintext is substituted with ciphertext.<br>
+<input type="radio" value="c" name="question5">c) Each letter in plaintext is substituted by another letter in the alphabet.<br>
+<input type="radio" value="d" name="question5">d) Ciphertext is substituted with plaintext.<br>
+</div>
+
+<br>
+
+<div class="qheader">
+6) What is meant by the term Shift?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question6">a) The letters are swapped with each others.<br>
+<input type="radio" value="b" name="question6">b) Each letter is moved down the alphabet by a certain number of positions.<br>
+<input type="radio" value="c" name="question6">c) Each letter is replaced by a number.<br>
+<input type="radio" value="d" name="question6">d) Each letter is added a random letter to it.<br>
+</div>
+
+<br>
+
+<div class="qheader">
+7) What is Frequency Analysis?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question7">a) To analyse the numbers of occurrence of letters in a ciphertext.  <br>
+<input type="radio" value="b" name="question7">b) To use the knowledge of wave frequency to crack ciphertext.<br>
+<input type="radio" value="c" name="question7">c) To analyse how frequent English language has been used in cipher.<br>
+<input type="radio" value="d" name="question7">d) The study of English language usage in cryptography.<br>
+</div>
+
+<br>
+
+<div class="qheader">
+8) What is the most commonly used letter in the English language?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question8">a) A<br>
+
+<input type="radio" value="b" name="question8">b) E<br>
+<input type="radio" value="c" name="question8">c) I<br>
+<input type="radio" value="d" name="question8">d) S<br>
+</div>
+
+
+</form>
+
+<form>
+<div align="center">
+<input type="button" value="Grade Me!" name="B1" onClick="gradeit()">
+<input type="button" value="Reset" name="B2" onClick="document.lesson1quiz.reset()"></div>
+</form>
+
+<p id="footnote" align="center"><font face="arial" size="-1">Quiz script provided by<br>
+<a href="http://www.javascriptkit.com">JavaScriptKit.com</a></font></p>
+</body>
+</html>
