@@ -37,7 +37,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
-* [[file:pages/assessment.html][Assessment]]
+* [[file:pages/assessment.html][Further Reading]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
