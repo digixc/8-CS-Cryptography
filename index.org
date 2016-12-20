@@ -21,11 +21,11 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
-* [[file:pages/4_Lesson.html][Week 3 - Cracking the Caesar Cipher]]
+* [[file:pages/3_Lesson.html][Week 3 - Cracking the Caesar Cipher]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:      
-* [[file:pages/3_Lesson.html][Week 4 - Hashing]]
+* [[file:pages/4_Lesson.html][Week 4 - Hashing]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:      
