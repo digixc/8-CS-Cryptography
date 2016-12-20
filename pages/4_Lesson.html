@@ -158,18 +158,27 @@ for the JavaScript code in this tag.
     </ul>
   </div>
 <div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1"><span class="section-number-2">1</span> Cracking the Caesar Cipher</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Storing Passwords</h2>
 <div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="img/passwords.jpg" alt="passwords.jpg" />
+</p>
+</div>
 </div>
 <div id="outline-container-sec-1-1" class="outline-3 learn">
 <h3 id="sec-1-1">Learn It</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>Last lesson you learned about how <span class="underline">not</span> to store passwords, and the problem with the MD5 hashing algorithm.
+<li>Passwords are an annoying but necessary security measure.
 </li>
-<li>It's trivial for a cracker to figure out your password, just by looking up the MD5 hash on Google.
+<li>Sometimes passwords are used to authenticate you (prove you are who you say you are) and other times they are used as keys in encryption (like in the "bacon" example in the video on Vigenere Cipher).
 </li>
-<li>As most people stupidly use the same password for many sites, the cracker would probably then have their main password.
+<li>Have you ever thought how password authentication works?
+</li>
+<li>At a login form, you type in your username and password and the website can somehow check that the password you typed in is the correct one.
+</li>
+<li>But how does it know?
 </li>
 </ul>
 </div>
@@ -178,9 +187,30 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-2">Learn It</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
-<li>One of the best ways of learning how to stop crackers, is to learn how they are able to attack encryption schemes.
+<li>Have you ever forgotten your password to a website?
 </li>
-<li>We'll start of by learning how to crack the Caesar Cipher.
+</ul>
+
+<div class="figure">
+<p><img src="img/passwords2.png" alt="passwords2.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Most websites have a link that you can click if you've forgotten your password.
+</li>
+<li>One of two things then tends to happen&#x2026;
+<ol class="org-ol">
+<li>The website emails you your password
+</li>
+<li>The website emails you a link to reset your password.
+</li>
+</ol>
+</li>
+<li>You might find the latter option to be annoying, as you have to think up a new password, but if the site has emailed you back your password, that means they must have it stored somewhere as <code>Plaintext</code>.
+</li>
+<li>It is a bad idea to store users' passwords in Plaintext. If a site gets hacked then the crackers will have access to everyone's password.
+</li>
+<li>For this reason, websites tend not to store passwords. Instead your password is encrypted using a <code>Cryptographic Hash Function</code>.
 </li>
 </ul>
 </div>
@@ -189,154 +219,216 @@ for the JavaScript code in this tag.
 <h3 id="sec-1-3">Try It</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
-<li>Here's a message that has been encrypted using the Caesar Cipher.
+<li>We're going to use a simple but unsafe Hashing algorithm that could be used to check passwords.
+</li>
+<li>Think of a password you might use for a website. It must only contain letters and numbers (no punctuation or spaces).
+</li>
+<li>Write out your password on some paper or a text document.
+</li>
+<li>e.g.
 </li>
 </ul>
 <pre class="example">
-odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr frqixvh d fudfnhu.
-dqbzdb wkh vhfuhw phvvdjh lv, qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq
+h0rs3batt3rystapl3
 </pre>
 <ul class="org-ul">
-<li>Can you figure out what the message says? 
+<li>Underneath the password, write down the value for each letter with A = 0 and Z = 25, numbers retain their original value.
+</li>
+</ul>
+<pre class="example">
+h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
+7 0 17 18 3 1 0 19 19 3 17 24 18 19 0 15 11 3
+</pre>
+<p>
+-Next add up all the digits of the numbers
+</p>
+<pre class="example">
+7+0+1+7+1+8+3+1+0+1+9+1+9+3+1+7+2+4+1+8+1+9+0+1+5+1+1+3
+=95
+</pre>
+<ul class="org-ul">
+<li>Then keep adding the digits until you end up with a single digit number.
+</li>
+</ul>
+<pre class="example">
+9+5
+=14
+1+4
+=5
+</pre>
+<ul class="org-ul">
+<li>So the hash (by this method) of h0rs3batt3rystapl3 is <code>5</code>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-4" class="outline-3 code">
-<h3 id="sec-1-4">Code It</h3>
+<div id="outline-container-sec-1-4" class="outline-3 learn">
+<h3 id="sec-1-4">Learn It</h3>
 <div class="outline-text-3" id="text-1-4">
 <ul class="org-ul">
-<li>Given enough time, you could probably decrypt the message, but it could take you awhile.
+<li>Most websites store your hashed password. In the above example they would store a 5.
 </li>
-<li>A computer can do it pretty quickly though.
+<li>When you want to login, you type in your password and it is instantly hashed and then compared to the hash in the server's database.
+</li>
+<li>It's very easy for the computer to check that h0rs3batt3rystapl3 is hashed to 5, but impossible for a cracker to reverse the 5 and figure out your password is h0rs3batt3rystapl3.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-5" class="outline-3 code">
-<h3 id="sec-1-5">Code It</h3>
+<div id="outline-container-sec-1-5" class="outline-3 try">
+<h3 id="sec-1-5">Try it</h3>
 <div class="outline-text-3" id="text-1-5">
 <ul class="org-ul">
-<li>Let's start with a couple of variables with the information we need.
-</li>
-<li>Open up a new python file (CC-crack.py) in IDLE and add the following lines of code.
+<li>Write down the password and hash that you worked out in the <i>Try it</i> section above. Then find out the passwords and hashes for 5 of your friends and write them down as well.
 </li>
 </ul>
-<div class="org-src-container">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<pre class="src src-python">alphabet = 'abcdefghijklmnopqrstuvwxyz'
-cipherText = '''odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr 
-frqixvh d fudfnhu. dqbzdb wkh vhfuhw phvvdjh lv,
-qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
-</pre>
-</div>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">User</th>
+<th scope="col" class="left">Password</th>
+<th scope="col" class="left">Hash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 <ul class="org-ul">
-<li>In Python, if we want a multiline string, we use three quotes '''
+<li>In your own words, why would it <span class="underline">not</span> be a good idea for a website to use the hashing algorithm we used above to hash passwords?
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-6" class="outline-3 design">
-<h3 id="sec-1-6">Design It</h3>
+<div id="outline-container-sec-1-6" class="outline-3 learn">
+<h3 id="sec-1-6">Learn It</h3>
 <div class="outline-text-3" id="text-1-6">
 <ul class="org-ul">
-<li>The algorithm for this isn't too complicated.
+<li>So if the hashing algorithm we used above is poor, what's a better one?
 </li>
-<li>We're basically going to try all 25 possible shift values on the secret message.
+<li>Watch this video on storing passwords and answer the questions in the Badge It section below.
 </li>
 </ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8ZtInClXe1Q" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
-<div id="outline-container-sec-1-7" class="outline-3 learn">
-<h3 id="sec-1-7">Learn It</h3>
+<div id="outline-container-sec-1-7" class="outline-3 badge">
+<h3 id="sec-1-7">Badge It</h3>
 <div class="outline-text-3" id="text-1-7">
-<ul class="org-ul">
-<li>We've used a <code>for</code> loop before to <i>iterate</i> over a string of characters.
-</li>
-</ul>
-<div class="org-src-container">
 
-<pre class="src src-python">text = 'the quick brown fox jumped over the lazy dog'
-for letter in text:
-    print(letter)
-</pre>
-</div>
-<ul class="org-ul">
-<li>But we can also use for loops to iterate over a range of numbers
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">for i in range(10):
-    print(i)
-
-for i in range(5, 20):
-    print(i)
-
-for i in range(10, 100, 5):
-    print(i)
-
-for i in range(10, 0, -1):
-    print(i)
-
-for i in range(10, -20, -1):
-    print(i)
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-1-8" class="outline-3 badge">
-<h3 id="sec-1-8">Badge It - Silver</h3>
-<div class="outline-text-3" id="text-1-8">
-<ul class="org-ul">
-<li>Create a new file called forLoops.py
-</li>
-<li>For each of the <code>for</code> loops above, describe what they print out.
-</li>
-<li>Construct <code>for</code> loops to print out the following.
 <ol class="org-ol">
-<li>All the numbers from 1 to 1000
+<li>Why should passwords not be stored in plaintext?
 </li>
-<li>All the even numbers from 100 to 200
+<li>Give two reasons why should you not store passwords in an encrypted format?
 </li>
-<li>All the numbers going backwards from 500 to 0 that are divisible by 10
+<li>Why is it a poor idea to save password hints in a database.
+</li>
+<li>What's wrong with just hashing a password?
+</li>
+<li>What is a salt?
+</li>
+
+<li>You will be awarded <b>silver</b> or <b>gold</b> depending on the quality of your answer.
 </li>
 </ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-8" class="outline-3 learn">
+<h3 id="sec-1-8">Learn It</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Let's have a look at a pretty good hashing algorithm.
+</li>
+<li>The MD5 hashing algorithm has been around for quite some time, but it is not advised that it be used to hash passwords as on modern hardware it can be cracked.
+</li>
+<li>However, the MD5 hashing algorithm is good enough to see how hashing works.
 </li>
 </ul>
 </div>
 </div>
+
 <div id="outline-container-sec-1-9" class="outline-3 code">
 <h3 id="sec-1-9">Code It</h3>
 <div class="outline-text-3" id="text-1-9">
 <ul class="org-ul">
-<li>Put these lines of code into your file.
+<li>Open up IDLE on your computer.
+</li>
+<li>We're not going to try an implement the MD5 algorithm ourselves, as that would be pretty tricky. Luckily it's already been done for us and available in Python.
+</li>
+<li>We'll need to import a library to use the MD5 hashing algorithm and then a single line of code.
+</li>
+<li>Write this in your interpreter.
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">for i in range(1, 26):
-    plainText = ''
+<pre class="src src-python">import hashlib
+print(hashlib.md5("A random password goes here".encode('utf-8')).hexdigest())
 </pre>
 </div>
 <ul class="org-ul">
-<li>This will give use all the shift values as the variable <code>i</code>
-</li>
-<li>It also creates an empty string, ready to build the decrypted text.
+<li>Now try changing the string you use (change the section "A random password goes here") with a few different strings.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-10" class="outline-3 learn">
-<h3 id="sec-1-10">Learn It</h3>
+<div id="outline-container-sec-1-10" class="outline-3 try">
+<h3 id="sec-1-10">Try It</h3>
 <div class="outline-text-3" id="text-1-10">
 <ul class="org-ul">
-<li>We now want to iterate over the letters in the cipherText.
+<li>So using the MD5 Hashing algorithm we can get what seems to be an irreversible hash of strings.
 </li>
-<li>We can do this with another <code>for</code> loop.
+<li>Let's try what Tom Scott suggests in the video though.
 </li>
-<li>Placing one <code>for</code> loop inside another <code>for</code> loop is called <i>nesting</i>
+<li>Generate the MD5 hash for the string 'qwerty123456'
+</li>
+<li>Now copy and paste the output into a Google Search box and see what results you get back
+</li>
+<li>Now let's try salting the password.
 </li>
 </ul>
 </div>
@@ -344,326 +436,44 @@ for i in range(10, -20, -1):
 <div id="outline-container-sec-1-11" class="outline-3 code">
 <h3 id="sec-1-11">Code It</h3>
 <div class="outline-text-3" id="text-1-11">
+
+
 <ul class="org-ul">
-<li>Change your code so it looks like this.
+<li>We can get a random number in Python using the random module
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">alphabet = 'abcdefghijklmnopqrstuvwxyz'
-cipherText = '''odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr 
-frqixvh d fudfnhu. dqbzdb wkh vhfuhw phvvdjh lv,
-qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
-
-for i in range(1, 26):
-	plainText = ''
-	for letter in cipherText:
-		position = alphabet.index(letter)
-		shiftedIndex = position + i
-		shiftedLetter = alphabet[shiftedIndex]
-		print(shiftedLetter)
-</pre>
-</div>
-
-<ul class="org-ul">
-<li>When you run this code, you should get the following error
-</li>
-</ul>
-
-<pre class="example">
-Traceback (most recent call last):
-  File "/path/to/file/filename.py", line 9, in &lt;module&gt;
-    position = alphabet.index(letter)
-ValueError: substring not found
+<pre class="src src-python">import random
+random.random()
 </pre>
 </div>
 </div>
-
+</div>
 <div id="outline-container-sec-1-12" class="outline-3 try">
 <h3 id="sec-1-12">Try It</h3>
 <div class="outline-text-3" id="text-1-12">
 <ul class="org-ul">
-<li>So what has gone wrong?
+<li>Now try hashing the string "password" again, but this time add the random number to the end.
 </li>
-<li>Let's use a trace table to figure it out.
+<li><code>password0.2820163283196919</code> for instance produces <code>5c9b95def2914a66063f67ee0255e47e</code>
 </li>
-<li>Trace tables, trace the values of variables in our code 
+<li>Now try searching for the hash you produced on Google.
 </li>
-<li>The variables i, letter, position and shiftedLetter keep changing as the loop runs.
+<li>Hopefully you can now see why salting passwords is so important.
 </li>
 </ul>
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="right" />
-
-<col  class="left" />
-
-<col  class="right" />
-
-<col  class="right" />
-
-<col  class="left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="right">i</th>
-<th scope="col" class="left">letter</th>
-<th scope="col" class="right">position</th>
-<th scope="col" class="right">shiftedIndex</th>
-<th scope="col" class="left">shiftedLetter</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="right">1</td>
-<td class="left">o</td>
-<td class="right">14</td>
-<td class="right">15</td>
-<td class="left">p</td>
-</tr>
-
-<tr>
-<td class="right">1</td>
-<td class="left">d</td>
-<td class="right">3</td>
-<td class="right">4</td>
-<td class="left">e</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <div id="outline-container-sec-1-13" class="outline-3 badge">
-<h3 id="sec-1-13">Badge It - Gold</h3>
+<h3 id="sec-1-13">Badge It - Platinum</h3>
 <div class="outline-text-3" id="text-1-13">
 <ul class="org-ul">
-<li>Try to complete the trace table
+<li>Use the MD5 hashing algorithm to find the unsalted hashes of some common passwords that people might use e.g qwerty
 </li>
-<li>You should see that there is a problem with the code.
+<li>Identify hashes can be reversed with a simple Google search.
 </li>
-<li>Identify the problem and write a description of why the program crashes.
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-14" class="outline-3 code">
-<h3 id="sec-1-14">Code It</h3>
-<div class="outline-text-3" id="text-1-14">
-<ul class="org-ul">
-<li>As spaces aren't in our alphabet, we need a way of handling them in our code.
-</li>
-<li>While we're at it, we might as well handle other characters that are not in the alphabet, such as numbers and punctuation.
-</li>
-<li>We can use <i>conditional selection</i> to achieve this.
-</li>
-<li>Create a new Python file to practice conditional selection.
-</li>
-<li>Let's start off in the <i>Interpreter</i>
-</li>
-<li>Type the following
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">myVar = 10
-myVar &lt; 10
-</pre>
-</div>
-<ul class="org-ul">
-<li>You should see the word <code>False</code> appear
-</li>
-<li>Now try the following statements
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">myVar &gt; 10
-myVar = 10
-</pre>
-</div>
-<ul class="org-ul">
-<li>We can use the fact that these statements evaluate to <code>True</code> or <code>False</code> to make decisions in our program.
-</li>
-<li>Create a new Python file to practice in. You can delete it later.
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">myVar = 10
-if myVar &gt; 10:
-    print('Greater than 10')
-elif myVar &lt; 10:
-    print('Less than 10')
-else:
-    print('Equal to 10')
-</pre>
-</div>
-<ul class="org-ul">
-<li>Run this program.
-</li>
-<li>Conditional statements work by evaluating whether a statement is <code>True</code> or <code>False</code>
-</li>
-<li>So in the above example, <code>myVar &lt;10</code> evaluates to False.
-</li>
-<li>Now change the value of myVar and have a look at the results.
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-15" class="outline-3 code">
-<h3 id="sec-1-15">Code It</h3>
-<div class="outline-text-3" id="text-1-15">
-<ul class="org-ul">
-<li>So how does this help us?
-</li>
-<li>Try typing the following lines into the interpreter.
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">myLetters = 'abcdefg'
-'a' in myLetters
-'g' in myLetters
-' ' in myLetters
-'?' in myLetters
-</pre>
-</div>
-<ul class="org-ul">
-<li>So we can detect if a character is missing from a string of characters and then use conditionals to make different choices.
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-16" class="outline-3 code">
-<h3 id="sec-1-16">Code It</h3>
-<div class="outline-text-3" id="text-1-16">
-<ul class="org-ul">
-<li>Let's try and use what you have learned to make our program work a little better.
-</li>
-<li>Use the structured English below to help you build the program in Python.
-</li>
-</ul>
-<pre class="example">
-1. For i being every number from 1 through to 26...
-2. Set plainText to an empty string
-3. For every letter in cipherText
-4. If the letter is not in alphabet then set shiftedLetter to letter
-5. Else set index to letter's position in the alphabet
-6. Set shiftIndex to index + i
-7. Set shiftedLetter to the letter at shiftIndex in the alphabet
-8. Add the shifted Letter to the plainText
-9. Print the plainText once the second For loop ends.
-</pre>
-<ul class="org-ul">
-<li>Run your code again.
-</li>
-<li>You should get a new error that looks like this.
-</li>
-</ul>
-<pre class="example">
-Traceback (most recent call last):
-  File "/path/to/python/file.py", line 14, in &lt;module&gt;
-    shiftedLetter = alphabet[shiftIndex]
-IndexError: string index out of range
-</pre>
-<ul class="org-ul">
-<li>If you don't get that error <code>string index out of range</code> then keep trying or ask for some help.
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-17" class="outline-3 try">
-<h3 id="sec-1-17">Try It</h3>
-<div class="outline-text-3" id="text-1-17">
-<ul class="org-ul">
-<li>So what does <code>string index out of range</code> mean?
-</li>
-<li>Let's go back to the <i>interpreter</i> to try and see if we can reproduce the error.
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">myString = 'abcdefg'
-myString[3]
-myString[7]
-</pre>
-</div>
-<ul class="org-ul">
-<li>We get the same error. There is no 7th element of the string as we start counting from 0, so the last letter is actually the 6th element.
-</li>
-<li>We have the same problem in our code.
-</li>
-<li>As we add <code>i</code> to the letters position, eventually we're going to get a number larger than 25, and there are only positions in our alphabet string are 0..25 
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-18" class="outline-3 learn">
-<h3 id="sec-1-18">Learn It</h3>
-<div class="outline-text-3" id="text-1-18">
-<ul class="org-ul">
-<li>Luckily there is a simple operator that can solve this for us.
-</li>
-<li>If our program is trying to look up the value of the 26th element in the string, we actually want it to find the 0th element of the string. If it's trying to look up the 29th element of the list, we want it to actually look up the 3rd item.
-</li>
-<li>The modulo operator finds the <i>remainder</i> after division. In Python we use the <code>%</code> symbol.
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-19" class="outline-3 try">
-<h3 id="sec-1-19">Try It</h3>
-<div class="outline-text-3" id="text-1-19">
-<ul class="org-ul">
-<li>In the interpreter try the following.
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">12 % 26
-26 % 26
-29 % 26
-</pre>
-</div>
-<ul class="org-ul">
-<li>Hopefully you can see how this can help us out. If not, then ask your teacher or a peer for a little help.
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-20" class="outline-3 badge">
-<h3 id="sec-1-20">Badge It - Platinum</h3>
-<div class="outline-text-3" id="text-1-20">
-<ul class="org-ul">
-<li>Let's try and finish off our program now.
-</li>
-</ul>
-<div class="org-src-container">
-
-<pre class="src src-python">alphabet = 'abcdefghijklmnopqrstuvwxyz'
-cipherText = '''odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr 
-frqixvh d fudfnhu. dqbzdb wkh vhfuhw phvvdjh lv,
-qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
-
-for i in range(1,26):
-    plainText = ''
-    for letter in cipherText:
-	if
-
-	else:
-
-
-
-	plainText += shiftedLetter
-    print('With a shift of',i,'the message is\n\n',plainText,'\n')
-</pre>
-</div>
-<ul class="org-ul">
-<li>You need to complete the program by completing the conditional statements.
-</li>
-<li>When you run the program, you should get 25 attempts at decryption, one of which should make sense.
+<li>Use the examples you have generated along with what you have learned in this lesson to write up a document giving advice to users on why they should use strong and unique passwords on websites, and why their password hints should not be directly related to their password.
 </li>
 </ul>
 </div>
@@ -671,7 +481,7 @@ for i in range(1,26):
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="validation"></p>
 </div>
 </body>
 </html>

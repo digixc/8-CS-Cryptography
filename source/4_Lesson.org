@@ -91,291 +91,159 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Cracking the Caesar Cipher
+* Storing Passwords
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+[[file:img/passwords.jpg]]
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Last lesson you learned about how _not_ to store passwords, and the problem with the MD5 hashing algorithm.
-- It's trivial for a cracker to figure out your password, just by looking up the MD5 hash on Google.
-- As most people stupidly use the same password for many sites, the cracker would probably then have their main password.
+- Passwords are an annoying but necessary security measure.
+- Sometimes passwords are used to authenticate you (prove you are who you say you are) and other times they are used as keys in encryption (like in the "bacon" example in the video on Vigenere Cipher).
+- Have you ever thought how password authentication works?
+- At a login form, you type in your username and password and the website can somehow check that the password you typed in is the correct one.
+- But how does it know?
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- One of the best ways of learning how to stop crackers, is to learn how they are able to attack encryption schemes.
-- We'll start of by learning how to crack the Caesar Cipher.
+- Have you ever forgotten your password to a website?
+[[file:img/passwords2.png]]
+- Most websites have a link that you can click if you've forgotten your password.
+- One of two things then tends to happen...
+  1. The website emails you your password
+  2. The website emails you a link to reset your password.
+- You might find the latter option to be annoying, as you have to think up a new password, but if the site has emailed you back your password, that means they must have it stored somewhere as =Plaintext=.
+- It is a bad idea to store users' passwords in Plaintext. If a site gets hacked then the crackers will have access to everyone's password.
+- For this reason, websites tend not to store passwords. Instead your password is encrypted using a =Cryptographic Hash Function=.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Here's a message that has been encrypted using the Caesar Cipher.
-#+BEGIN_SRC
-odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr frqixvh d fudfnhu.
-dqbzdb wkh vhfuhw phvvdjh lv, qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq
-#+END_SRC
-- Can you figure out what the message says? 
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-- Given enough time, you could probably decrypt the message, but it could take you awhile.
-- A computer can do it pretty quickly though.
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-- Let's start with a couple of variables with the information we need.
-- Open up a new python file (CC-crack.py) in IDLE and add the following lines of code.
-#+BEGIN_SRC python
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
-cipherText = '''odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr 
-frqixvh d fudfnhu. dqbzdb wkh vhfuhw phvvdjh lv,
-qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
-#+END_SRC
-- In Python, if we want a multiline string, we use three quotes '''
-** Design It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: design
-:END:
-- The algorithm for this isn't too complicated.
-- We're basically going to try all 25 possible shift values on the secret message.
+- We're going to use a simple but unsafe Hashing algorithm that could be used to check passwords.
+- Think of a password you might use for a website. It must only contain letters and numbers (no punctuation or spaces).
+- Write out your password on some paper or a text document.
+- e.g.
+#+BEGIN_EXAMPLE
+h0rs3batt3rystapl3
+#+END_EXAMPLE
+- Underneath the password, write down the value for each letter with A = 0 and Z = 25, numbers retain their original value.
+#+BEGIN_EXAMPLE
+h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
+7 0 17 18 3 1 0 19 19 3 17 24 18 19 0 15 11 3 
+#+END_EXAMPLE
+-Next add up all the digits of the numbers
+#+BEGIN_EXAMPLE
+7+0+1+7+1+8+3+1+0+1+9+1+9+3+1+7+2+4+1+8+1+9+0+1+5+1+1+3
+=95
+#+END_EXAMPLE
+- Then keep adding the digits until you end up with a single digit number.
+#+BEGIN_EXAMPLE
+9+5
+=14
+1+4
+=5
+#+END_EXAMPLE
+- So the hash (by this method) of h0rs3batt3rystapl3 is =5=
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- We've used a =for= loop before to /iterate/ over a string of characters.
-#+BEGIN_SRC python
-  text = 'the quick brown fox jumped over the lazy dog'
-  for letter in text:
-      print(letter)
-#+END_SRC
-- But we can also use for loops to iterate over a range of numbers
-#+BEGIN_SRC python
-  for i in range(10):
-      print(i)
-
-  for i in range(5, 20):
-      print(i)
-
-  for i in range(10, 100, 5):
-      print(i)
-
-  for i in range(10, 0, -1):
-      print(i)
-
-  for i in range(10, -20, -1):
-      print(i)
-#+END_SRC
-
-** Badge It - Silver
+- Most websites store your hashed password. In the above example they would store a 5.
+- When you want to login, you type in your password and it is instantly hashed and then compared to the hash in the server's database.
+- It's very easy for the computer to check that h0rs3batt3rystapl3 is hashed to 5, but impossible for a cracker to reverse the 5 and figure out your password is h0rs3batt3rystapl3.
+** Try it
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Write down the password and hash that you worked out in the /Try it/ section above. Then find out the passwords and hashes for 5 of your friends and write them down as well.
+| User | Password | Hash |
+|------+----------+------|
+|      |          |      |
+|      |          |      |
+|      |          |      |
+|      |          |      |
+|      |          |      |
+|      |          |      |
+- In your own words, why would it _not_ be a good idea for a website to use the hashing algorithm we used above to hash passwords?
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- So if the hashing algorithm we used above is poor, what's a better one?
+- Watch this video on storing passwords and answer the questions in the Badge It section below.
+#+BEGIN_HTML
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8ZtInClXe1Q" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
+** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Create a new file called forLoops.py
-- For each of the =for= loops above, describe what they print out.
-- Construct =for= loops to print out the following.
-  1. All the numbers from 1 to 1000
-  2. All the even numbers from 100 to 200
-  3. All the numbers going backwards from 500 to 0 that are divisible by 10
+
+1. Why should passwords not be stored in plaintext?
+2. Give two reasons why should you not store passwords in an encrypted format?
+3. Why is it a poor idea to save password hints in a database.
+4. What's wrong with just hashing a password?
+5. What is a salt?
+
+- You will be awarded *silver* or *gold* depending on the quality of your answer.
+
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Let's have a look at a pretty good hashing algorithm.
+- The MD5 hashing algorithm has been around for quite some time, but it is not advised that it be used to hash passwords as on modern hardware it can be cracked.
+- However, the MD5 hashing algorithm is good enough to see how hashing works.
+
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
-:END:
-- Put these lines of code into your file.
+:END:      
+- Open up IDLE on your computer.
+- We're not going to try an implement the MD5 algorithm ourselves, as that would be pretty tricky. Luckily it's already been done for us and available in Python.
+- We'll need to import a library to use the MD5 hashing algorithm and then a single line of code.
+- Write this in your interpreter.
 #+BEGIN_SRC python
-  for i in range(1, 26):
-      plainText = ''
+import hashlib
+print(hashlib.md5("A random password goes here".encode('utf-8')).hexdigest())
 #+END_SRC
-- This will give use all the shift values as the variable =i=
-- It also creates an empty string, ready to build the decrypted text.
-** Learn It
+- Now try changing the string you use (change the section "A random password goes here") with a few different strings.
+** Try It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
+:HTML_CONTAINER_CLASS: try
 :END:
-- We now want to iterate over the letters in the cipherText.
-- We can do this with another =for= loop.
-- Placing one =for= loop inside another =for= loop is called /nesting/
+- So using the MD5 Hashing algorithm we can get what seems to be an irreversible hash of strings.
+- Let's try what Tom Scott suggests in the video though.
+- Generate the MD5 hash for the string 'qwerty123456'
+- Now copy and paste the output into a Google Search box and see what results you get back
+- Now let's try salting the password.
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
-:END:
-- Change your code so it looks like this.
-#+BEGIN_SRC python :results output
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
-cipherText = '''odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr 
-frqixvh d fudfnhu. dqbzdb wkh vhfuhw phvvdjh lv,
-qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
+:END:      
 
-for i in range(1, 26):
-	plainText = ''
-	for letter in cipherText:
-		position = alphabet.index(letter)
-		shiftedIndex = position + i
-		shiftedLetter = alphabet[shiftedIndex]
-		print(shiftedLetter)
+
+- We can get a random number in Python using the random module
+#+BEGIN_SRC python
+import random
+random.random()
 #+END_SRC
-
-- When you run this code, you should get the following error
-
-#+begin_example
-Traceback (most recent call last):
-  File "/path/to/file/filename.py", line 9, in <module>
-    position = alphabet.index(letter)
-ValueError: substring not found
-#+end_example
-
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- So what has gone wrong?
-- Let's use a trace table to figure it out.
-- Trace tables, trace the values of variables in our code 
-- The variables i, letter, position and shiftedLetter keep changing as the loop runs.
-| i | letter | position | shiftedIndex | shiftedLetter |
-|---+--------+----------+--------------+---------------|
-| 1 | o      |       14 |           15 | p             |
-| 1 | d      |        3 |            4 | e             |
-** Badge It - Gold
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Try to complete the trace table
-- You should see that there is a problem with the code.
-- Identify the problem and write a description of why the program crashes.
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-- As spaces aren't in our alphabet, we need a way of handling them in our code.
-- While we're at it, we might as well handle other characters that are not in the alphabet, such as numbers and punctuation.
-- We can use /conditional selection/ to achieve this.
-- Create a new Python file to practice conditional selection.
-- Let's start off in the /Interpreter/
-- Type the following
-#+begin_src python
-  myVar = 10
-  myVar < 10
-#+end_src
-- You should see the word =False= appear
-- Now try the following statements
-#+begin_src python
-  myVar > 10
-  myVar = 10
-#+end_src
-- We can use the fact that these statements evaluate to =True= or =False= to make decisions in our program.
-- Create a new Python file to practice in. You can delete it later.
-#+begin_src python
-  myVar = 10
-  if myVar > 10:
-      print('Greater than 10')
-  elif myVar < 10:
-      print('Less than 10')
-  else:
-      print('Equal to 10')
-#+end_src
-- Run this program.
-- Conditional statements work by evaluating whether a statement is =True= or =False=
-- So in the above example, =myVar <10= evaluates to False.
-- Now change the value of myVar and have a look at the results.
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-- So how does this help us?
-- Try typing the following lines into the interpreter.
-#+begin_src python
-myLetters = 'abcdefg'
-'a' in myLetters
-'g' in myLetters
-' ' in myLetters
-'?' in myLetters
-#+end_src
-- So we can detect if a character is missing from a string of characters and then use conditionals to make different choices.
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-- Let's try and use what you have learned to make our program work a little better.
-- Use the structured English below to help you build the program in Python.
-#+begin_example
-1. For i being every number from 1 through to 26...
-2. Set plainText to an empty string
-3. For every letter in cipherText
-4. If the letter is not in alphabet then set shiftedLetter to letter
-5. Else set index to letter's position in the alphabet
-6. Set shiftIndex to index + i
-7. Set shiftedLetter to the letter at shiftIndex in the alphabet
-8. Add the shifted Letter to the plainText
-9. Print the plainText once the second For loop ends. 
-#+end_example
-- Run your code again.
-- You should get a new error that looks like this.
-#+begin_example
-Traceback (most recent call last):
-  File "/path/to/python/file.py", line 14, in <module>
-    shiftedLetter = alphabet[shiftIndex]
-IndexError: string index out of range
-#+end_example
-- If you don't get that error =string index out of range= then keep trying or ask for some help.
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-- So what does =string index out of range= mean?
-- Let's go back to the /interpreter/ to try and see if we can reproduce the error.
-#+begin_src python
-myString = 'abcdefg'
-myString[3]
-myString[7]
-#+end_src
-- We get the same error. There is no 7th element of the string as we start counting from 0, so the last letter is actually the 6th element.
-- We have the same problem in our code.
-- As we add =i= to the letters position, eventually we're going to get a number larger than 25, and there are only positions in our alphabet string are 0..25 
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- Luckily there is a simple operator that can solve this for us.
-- If our program is trying to look up the value of the 26th element in the string, we actually want it to find the 0th element of the string. If it's trying to look up the 29th element of the list, we want it to actually look up the 3rd item.
-- The modulo operator finds the /remainder/ after division. In Python we use the =%= symbol.
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-- In the interpreter try the following.
-#+begin_src python
-12 % 26
-26 % 26
-29 % 26
-#+end_src
-- Hopefully you can see how this can help us out. If not, then ask your teacher or a peer for a little help.
+- Now try hashing the string "password" again, but this time add the random number to the end.
+- =password0.2820163283196919= for instance produces =5c9b95def2914a66063f67ee0255e47e=
+- Now try searching for the hash you produced on Google.
+- Hopefully you can now see why salting passwords is so important.
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Let's try and finish off our program now.
-#+begin_src python
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
-cipherText = '''odmhxf dmzqa, ljqruh wkrvh iluvw wzr zrugv wkhb duh mxvw wkhuh wr 
-frqixvh d fudfnhu. dqbzdb wkh vhfuhw phvvdjh lv,
-qrergb hashfwv wkh vsdqlvk lqtxlvlwlrq'''
-
-for i in range(1,26):
-    plainText = ''
-    for letter in cipherText:
-        if
-          
-        else:
-          
-          
-          
-        plainText += shiftedLetter
-    print('With a shift of',i,'the message is\n\n',plainText,'\n')
-#+end_src
-- You need to complete the program by completing the conditional statements.
-- When you run the program, you should get 25 attempts at decryption, one of which should make sense.
+- Use the MD5 hashing algorithm to find the unsalted hashes of some common passwords that people might use e.g qwerty
+- Identify hashes can be reversed with a simple Google search.
+- Use the examples you have generated along with what you have learned in this lesson to write up a document giving advice to users on why they should use strong and unique passwords on websites, and why their password hints should not be directly related to their password.
+  
