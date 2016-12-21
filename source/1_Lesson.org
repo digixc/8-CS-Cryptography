@@ -169,6 +169,6 @@
 - In your own words (remember to use a text editor and the .txt extension), provide a brief description of how the Vigenere Cipher works.
 - Now try decrypting this message using the Vigenere Cipher and the key of "compsci"
 #+BEGIN_QUOTE
-Ecyemvmt goxwpkg we cg owts mqgwb ecyemvmtg fwsp iuhddfqua we ptqcv hqawukqdqh 
+Gbogqrbkcz bsmmu qabewvkqmiaqv uortj. 
 #+END_QUOTE
 - Keep the answer a secret so that your friends have to work it out themselves.

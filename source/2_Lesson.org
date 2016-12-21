@@ -100,18 +100,15 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 
-- Now you know all about the Caesar Cipher, we're going to try and implement it in Python.
+- The basic steps for encrypting a message using Caeser cypher are:
+  1. =Step 1=: starting with a list of normal alphabet as shown in the top row below and a shifted alphabet as shown as the second row. The gif below shows a shift of 3.
+      [[./img/Caeser.gif]]
+  2. =Step 2=: going through the letter in the original message, aka, =plaintext=, one at a time to find out its shufted letter at the same position in the shifted alphabet. For example, for the letter a in plaintext, whose position in the normal aphalbet is 0, so its shifted letter at position 0 in the shifted alphabet is d, assuming the shift is 3. Therefore, a is encrypted into d.
+  3. =Step 3=: repeat step 2 for all the rest of the letters in the plaintext to produce the encrypted message, aka, =cyphertext=.
+- Now you know all about the Caesar Cipher, we're going to try and implement it in Python. 
 - We'll start off with some Python basics.
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-- Find the installed version of IDLE on your computer.
-- IDLE is the Interactive Development Environment (IDE) that comes with Python.
-- IDLE is basically a =text editor= and an =interpreter= (a program that can run python scripts)
-- The first window that opens up is the interpreter.
-[[file:img/IDLE1.png]]
-- If we just want to write some code, and don't care about saving it, then we can write directly into the IDLE interpreter.
+
+
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -133,7 +130,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Have a go at writing the lines of code that are written below into your interpreter.
+- Have a go at writing the lines of code that are written below into the shell.
 #+BEGIN_SRC python
   print(Hello World!)
   print('Hello World!')
@@ -146,6 +143,11 @@
   print('A+B')
   print('A'+'B')
 #+END_SRC
+=Click on the Run to start the trinket=
+#+BEGIN_HTML
+<iframe src="https://trinket.io/embed/python/f99d6c2127?outputOnly=true&runOption=console&runMode=console" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+#+END_HTML
+
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -160,14 +162,23 @@
 :END:
 - Now you know what strings are, we need a way of storing them.
 - We can use a variable to store our strings.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Find the installed version of Thonny on your computer.
+- Thonny is the Interactive Development Environment (IDE)for Python.
+- After you launch Thonny, you should see a =text editor= on the top half of the window, and an =interpreter= (the shell) on the lower window.
+- If we just want to write some code, and don't care about saving it, then we can write directly into the shell/interpreter.
+
+[[file:img/Thonny.png]]
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- In IDLE, select File>New.
-- This gives you a text editor to write your scripts in.
-- Save your file straight away and call it CC-encrypt.py
-- The .py is important.
+- You are going to write your Python code in the code editor area of your openned Thonny
+- Save your file straight away and call it *CC-encrypt.py*
+- The .py is important
 - Let's declare our first variable
 #+BEGIN_SRC python
   trueAlphabet = 'abcdefghijklmnopqrstuvwxyz'
@@ -177,8 +188,8 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-- Once you've declared your variable, press the =F5= key on your keyboard to run your script.
-- Now switch back to the interpreter and try the following.
+- Once you've declared your variable, press the =F5= key or click the green arrow to run your script.
+- Now switch back to the interpreter/shell and try the following.
 #+BEGIN_SRC python
   print(trueAlphabet)
 #+END_SRC

@@ -166,40 +166,29 @@ for the JavaScript code in this tag.
 <div class="outline-text-3" id="text-1-1">
 
 <ul class="org-ul">
-<li>Now you know all about the Caesar Cipher, we're going to try and implement it in Python.
+<li>The basic steps for encrypting a message using Caeser cypher are:
+<ol class="org-ol">
+<li><code>Step 1</code>: starting with a list of normal alphabet as shown in the top row below and a shifted alphabet as shown as the second row. The gif below shows a shift of 3.
+<img src="./img/Caeser.gif" alt="Caeser.gif" />
+</li>
+<li><code>Step 2</code>: going through the letter in the original message, aka, <code>plaintext</code>, one at a time to find out its shufted letter at the same position in the shifted alphabet. For example, for the letter a in plaintext, whose position in the normal aphalbet is 0, so its shifted letter at position 0 in the shifted alphabet is d, assuming the shift is 3. Therefore, a is encrypted into d.
+</li>
+<li><code>Step 3</code>: repeat step 2 for all the rest of the letters in the plaintext.
+</li>
+</ol>
+</li>
+<li>Now you know all about the Caesar Cipher, we're going to try and implement it in Python. 
 </li>
 <li>We'll start off with some Python basics.
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-2" class="outline-3 try">
-<h3 id="sec-1-2">Try It</h3>
-<div class="outline-text-3" id="text-1-2">
-<ul class="org-ul">
-<li>Find the installed version of IDLE on your computer.
-</li>
-<li>IDLE is the Interactive Development Environment (IDE) that comes with Python.
-</li>
-<li>IDLE is basically a <code>text editor</code> and an <code>interpreter</code> (a program that can run python scripts)
-</li>
-<li>The first window that opens up is the interpreter.
-</li>
-</ul>
 
-<div class="figure">
-<p><img src="img/IDLE1.png" alt="IDLE1.png" />
-</p>
-</div>
-<ul class="org-ul">
-<li>If we just want to write some code, and don't care about saving it, then we can write directly into the IDLE interpreter.
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-3" class="outline-3 learn">
-<h3 id="sec-1-3">Learn It</h3>
-<div class="outline-text-3" id="text-1-3">
+
+<div id="outline-container-sec-1-2" class="outline-3 learn">
+<h3 id="sec-1-2">Learn It</h3>
+<div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>The Caesar Cipher is a substitution cipher, meaning that one character in the alphabet is exchanged for another character.
 </li>
@@ -226,11 +215,11 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-4" class="outline-3 try">
-<h3 id="sec-1-4">Try It</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-sec-1-3" class="outline-3 try">
+<h3 id="sec-1-3">Try It</h3>
+<div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
-<li>Have a go at writing the lines of code that are written below into your interpreter.
+<li>Have a go at writing the lines of code that are written below into the shell.
 </li>
 </ul>
 <div class="org-src-container">
@@ -247,11 +236,16 @@ print('A+B')
 print('A'+'B')
 </pre>
 </div>
+<p>
+<code>Click on the Run to start the trinket</code>
+</p>
+<iframe src="https://trinket.io/embed/python/f99d6c2127?outputOnly=true&runOption=console&runMode=console" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 </div>
-<div id="outline-container-sec-1-5" class="outline-3 badge">
-<h3 id="sec-1-5">Badge It - Silver</h3>
-<div class="outline-text-3" id="text-1-5">
+
+<div id="outline-container-sec-1-4" class="outline-3 badge">
+<h3 id="sec-1-4">Badge It - Silver</h3>
+<div class="outline-text-3" id="text-1-4">
 <ul class="org-ul">
 <li>Which line(s) of code produce errors and why?
 </li>
@@ -264,9 +258,9 @@ print('A'+'B')
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-1-6" class="outline-3 learn">
-<h3 id="sec-1-6">Learn It</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-sec-1-5" class="outline-3 learn">
+<h3 id="sec-1-5">Learn It</h3>
+<div class="outline-text-3" id="text-1-5">
 <ul class="org-ul">
 <li>Now you know what strings are, we need a way of storing them.
 </li>
@@ -275,17 +269,36 @@ print('A'+'B')
 </ul>
 </div>
 </div>
+<div id="outline-container-sec-1-6" class="outline-3 try">
+<h3 id="sec-1-6">Try It</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Find the installed version of Thonny on your computer.
+</li>
+<li>Thonny is the Interactive Development Environment (IDE)for Python.
+</li>
+<li>After you launch Thonny, you should see a <code>text editor</code> on the top half of the window, and an <code>interpreter</code> (the shell) on the lower window.
+</li>
+<li>If we just want to write some code, and don't care about saving it, then we can write directly into the shell/interpreter.
+</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="img/Thonny.png" alt="Thonny.png" />
+</p>
+</div>
+</div>
+</div>
 <div id="outline-container-sec-1-7" class="outline-3 code">
 <h3 id="sec-1-7">Code It</h3>
 <div class="outline-text-3" id="text-1-7">
 <ul class="org-ul">
-<li>In IDLE, select File&gt;New.
+<li>You are going to write your Python code in the code editor area of your openned Thonny
 </li>
-<li>This gives you a text editor to write your scripts in.
+<li>Save your file straight away and call it <b>CC-encrypt.py</b>
 </li>
-<li>Save your file straight away and call it CC-encrypt.py
-</li>
-<li>The .py is important.
+<li>The .py is important
 </li>
 <li>Let's declare our first variable
 </li>
@@ -305,9 +318,9 @@ print('A'+'B')
 <h3 id="sec-1-8">Run It</h3>
 <div class="outline-text-3" id="text-1-8">
 <ul class="org-ul">
-<li>Once you've declared your variable, press the <code>F5</code> key on your keyboard to run your script.
+<li>Once you've declared your variable, press the <code>F5</code> key or click the green arrow to run your script.
 </li>
-<li>Now switch back to the interpreter and try the following.
+<li>Now switch back to the interpreter/shell and try the following.
 </li>
 </ul>
 <div class="org-src-container">
@@ -596,6 +609,11 @@ print(cipherText)
 </li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
 </div>
 </body>
 </html>
