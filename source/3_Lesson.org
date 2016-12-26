@@ -6,7 +6,7 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Clinton Delport
+#+AUTHOR: Mark Scott, Xiaohui Ellis
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">

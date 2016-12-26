@@ -6,7 +6,7 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Clinton Delport
+#+AUTHOR: Mark Scott, Xiaohui Ellis
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -198,44 +198,26 @@ h 0 r  s  3 b a t  t  3 r  y  s  t  a p  l  3
 - The MD5 hashing algorithm has been around for quite some time, but it is not advised that it be used to hash passwords as on modern hardware it can be cracked.
 - However, the MD5 hashing algorithm is good enough to see how hashing works.
 
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:      
-- Open up IDLE on your computer.
-- We're not going to try an implement the MD5 algorithm ourselves, as that would be pretty tricky. Luckily it's already been done for us and available in Python.
-- We'll need to import a library to use the MD5 hashing algorithm and then a single line of code.
-- Write this in your interpreter.
-#+BEGIN_SRC python
-import hashlib
-print(hashlib.md5("A random password goes here".encode('utf-8')).hexdigest())
-#+END_SRC
-- Now try changing the string you use (change the section "A random password goes here") with a few different strings.
+
+
+
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
 - So using the MD5 Hashing algorithm we can get what seems to be an irreversible hash of strings.
-- Let's try what Tom Scott suggests in the video though.
-- Generate the MD5 hash for the string 'qwerty123456'
-- Now copy and paste the output into a Google Search box and see what results you get back
-- Now let's try salting the password.
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:      
+- Let's try what Tom Scott suggests in the video though using the code in the Trinket below.
+- Input the common password 'qwerty123456' 
+- Input "N" for not adding randomness
+- Now copy and paste the generated MD5 hash into a Google Search box and see what results you get back
+#+BEGIN_HTML
+<iframe src="https://trinket.io/embed/python3/c54c2d77c8" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-
-- We can get a random number in Python using the random module
-#+BEGIN_SRC python
-import random
-random.random()
-#+END_SRC
-** Try It
+#+END_HTML
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Now try hashing the string "password" again, but this time add the random number to the end.
+- Now try hashing the string "qwerty123456" again, but this time choose to add the random number (salt) to the end.
 - =password0.2820163283196919= for instance produces =5c9b95def2914a66063f67ee0255e47e=
 - Now try searching for the hash you produced on Google.
 - Hopefully you can now see why salting passwords is so important.
