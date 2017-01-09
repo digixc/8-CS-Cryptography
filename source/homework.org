@@ -1,0 +1,147 @@
+
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
+
+#+TITLE: Cryptography
+#+AUTHOR: Xiaohui Ellis
+
+#+BEGIN_HTML
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+      <li><a href="homework.html">Homework Tasks</a></li>
+
+      <li><a href="assessment.html">Assessment</a></li>
+
+    </ul>
+  </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Implementing public key cryptography in Python
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+** Homework Task 1 - The Black Chamber
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+For centuries, nations around the world have operated Black Chambers, secret rooms where they attempted to decode the messages being sent by their rivals. The French operated the Cabinet Noir, in Vienna the Geheime Kabinets-Kanzlei was the home of Austria's greatest codebreakers, and in Britain there was Room 40 and then Bletchley Park.
+
+Go to http://www.simonsingh.net/The_Black_Chamber/chamberguide.html
+
+Write a brief report on the following three ciphers:
+1. one transposition cipher, 
+2. one substitution cipher, and
+3. one advanced cipher.
+
+
+** Homework Task 2 - Research: The One Time Pad(OTP) and the Enigma. 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
++ Find out about both codes for example why is it the OTP the only mathematically unbreakable code? 
++ Find out the history of the Enigma code. Here is a video to get you started. https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/one-time-pad and
+
++ Write 100 words on each.
+
+** Homework Task 3 - Caesar Cipher Challenges 
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+The Caesar shift cipher replaces every letter with the letter that is a fixed number of places further down the alphabet. For example if the shift is 2, then A is replaced with C, B with D, C with E and so on. Or if there is a shift of 5 then A is replaced with F, B with G, C with H and so on.
+
+1. Easy:
+
+BZDRZQ’R VHED LTRS AD ZANUD RTROHBHNM
+
+2. Medium:
+
+LWW RLFW TD OTGTOPO TYEZ ESCPP ALCED ZYP ZQ HSTNS ESP MPWRLP TYSLMTE ESP LBFTELYT LYZESPC ESZDP HSZ TY ESPTC ZHY WLYRFLRP LCP NLWWPO NPWED TY ZFC RLFWD ESP ESTCO LWW ESPDP OTQQPC QCZX PLNS ZESPC TY WLYRFLRP NFDEZXD LYO WLHD
+
+3. Hard:
+
+KENKMOC PYBDEXK TEFKD
+
+4. Bonus:
+
+MHILYLZAZBHLXBPZXBLMVYABUHLHWWPBZJSHBKPBZJH LJBZKPJABTHYJHUBTLZAULBAYVU
+
+There are online deciphers but only use them when you are completely stuck!

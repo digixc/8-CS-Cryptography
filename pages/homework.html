@@ -86,8 +86,10 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="pages/css/styles.css"/>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -138,49 +140,118 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Cryptography</h1>
-<div class="github-fork-ribbon-wrapper left">
+  <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-        <a href="https://github.com/MarcScott/8-CS-Cryptography">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
     </div>
-</div>
-<div id="outline-container-sec-1" class="outline-2 link-heading">
-<h2 id="sec-1"><a href="pages/1_Lesson.html">Week 1 - Encryption, Decryption and Keys</a></h2>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></li>
+      <li><a href="homework.html">Homework Tasks</a></li>
+
+      <li><a href="assessment.html">Assessment</a></li>
+
+    </ul>
+  </div>
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Implementing public key cryptography in Python</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-</div>
-<div id="outline-container-sec-2" class="outline-2 link-heading">
-<h2 id="sec-2"><a href="pages/2_Lesson.html">Week 2 - Caesar Cipher with Python</a></h2>
-<div class="outline-text-2" id="text-2">
-</div>
-</div>
-<div id="outline-container-sec-3" class="outline-2 link-heading">
-<h2 id="sec-3"><a href="pages/3_Lesson.html">Week 3 - Cracking the Caesar Cipher</a></h2>
-<div class="outline-text-2" id="text-3">
-</div>
-</div>
-<div id="outline-container-sec-4" class="outline-2 link-heading">
-<h2 id="sec-4"><a href="pages/4_Lesson.html">Week 4 - Hashing</a></h2>
-<div class="outline-text-2" id="text-4">
-</div>
-</div>
-<div id="outline-container-sec-5" class="outline-2 link-heading">
-<h2 id="sec-5"><a href="pages/5_Lesson.html">Week 5 - The cryptography debate</a></h2>
-<div class="outline-text-2" id="text-5">
-</div>
-</div>
-<div id="outline-container-sec-6" class="outline-2 link-heading">
-<h2 id="sec-6"><a href="pages/6_Lesson.html">Week 6 - Public Key Cryptography </a></h2>
-<div class="outline-text-2" id="text-6">
-</div>
-</div>
-<div id="outline-container-sec-7" class="outline-2 link-heading">
-<h2 id="sec-7"><a href="pages/homework.html">Homework Tasks</a></h2>
-<div class="outline-text-2" id="text-7">
+
+<div id="outline-container-sec-1-1" class="outline-3 badge">
+<h3 id="sec-1-1">Homework Task 1 - The Black Chamber</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+For centuries, nations around the world have operated Black Chambers, secret rooms where they attempted to decode the messages being sent by their rivals. The French operated the Cabinet Noir, in Vienna the Geheime Kabinets-Kanzlei was the home of Austria's greatest codebreakers, and in Britain there was Room 40 and then Bletchley Park.
+</p>
+
+<p>
+Go to <a href="http://www.simonsingh.net/The_Black_Chamber/chamberguide.html">http://www.simonsingh.net/The_Black_Chamber/chamberguide.html</a>
+</p>
+
+<p>
+Write a brief report on the following three ciphers:
+</p>
+<ol class="org-ol">
+<li>one transposition cipher, 
+</li>
+<li>one substitution cipher, and
+</li>
+<li>one advanced cipher.
+</li>
+</ol>
 </div>
 </div>
-<div id="outline-container-sec-8" class="outline-2 link-heading">
-<h2 id="sec-8"><a href="pages/7_furtherReading.html">Further Reading</a></h2>
-<div class="outline-text-2" id="text-8">
+
+
+<div id="outline-container-sec-1-2" class="outline-3 badge">
+<h3 id="sec-1-2">Homework Task 2 - Research: The One Time Pad(OTP) and the Enigma.</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Find out about both codes for example why is it the OTP the only mathematically unbreakable code? 
+</li>
+<li>Find out the history of the Enigma code. Here is a video to get you started. <a href="https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/one-time-pad">https://www.khanacademy.org/computing/computer-science/cryptography/crypt/v/one-time-pad</a> and
+</li>
+
+<li>Write 100 words on each.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3 badge">
+<h3 id="sec-1-3">Homework Task 3 - Caesar Cipher Challenges</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+The Caesar shift cipher replaces every letter with the letter that is a fixed number of places further down the alphabet. For example if the shift is 2, then A is replaced with C, B with D, C with E and so on. Or if there is a shift of 5 then A is replaced with F, B with G, C with H and so on.
+</p>
+
+<ol class="org-ol">
+<li>Easy:
+</li>
+</ol>
+
+<p>
+BZDRZQ’R VHED LTRS AD ZANUD RTROHBHNM
+</p>
+
+<ol class="org-ol">
+<li>Medium:
+</li>
+</ol>
+
+<p>
+LWW RLFW TD OTGTOPO TYEZ ESCPP ALCED ZYP ZQ HSTNS ESP MPWRLP TYSLMTE ESP LBFTELYT LYZESPC ESZDP HSZ TY ESPTC ZHY WLYRFLRP LCP NLWWPO NPWED TY ZFC RLFWD ESP ESTCO LWW ESPDP OTQQPC QCZX PLNS ZESPC TY WLYRFLRP NFDEZXD LYO WLHD
+</p>
+
+<ol class="org-ol">
+<li>Hard:
+</li>
+</ol>
+
+<p>
+KENKMOC PYBDEXK TEFKD
+</p>
+
+<ol class="org-ol">
+<li>Bonus:
+</li>
+</ol>
+
+<p>
+MHILYLZAZBHLXBPZXBLMVYABUHLHWWPBZJSHBKPBZJH LJBZKPJABTHYJHUBTLZAULBAYVU
+</p>
+
+<p>
+There are online deciphers but only use them when you are completely stuck!
+</p>
+</div>
 </div>
 </div>
 </div>
