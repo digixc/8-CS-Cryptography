@@ -94,7 +94,7 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Implementing public key cryptography in Python
+* Homework Tasks
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
