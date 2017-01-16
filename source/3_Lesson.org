@@ -92,20 +92,13 @@
 :END:
 
 * Cracking the Caesar Cipher
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
+
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Last lesson you learned about how _not_ to store passwords, and the problem with the MD5 hashing algorithm.
-- It's trivial for a cracker to figure out your password, just by looking up the MD5 hash on Google.
+- It's trivial for a cracker to figure out your password if you don'e choose a strong and secure password.
 - As most people stupidly use the same password for many sites, the cracker would probably then have their main password.
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
 - One of the best ways of learning how to stop crackers, is to learn how they are able to attack encryption schemes.
 - We'll start of by learning how to crack the Caesar Cipher.
 ** Try It
