@@ -146,7 +146,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- When you are ready, click [[./quiz/popquiz.htm][*here*]] to take the quiz.
+- When you are ready, click [[https://www.bournetolearn.com/quizzes/y8-crypto/Lesson_1/popquiz.php][*here*]] to take the quiz.
 - *Silver:* Achieve 4 out of 8
 - *Gold:* Achieve 6 out of 8
 ** Learn It
