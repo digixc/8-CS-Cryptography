@@ -102,7 +102,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Right click [[./doc/Cryptography-EndOfUitEvaluation.docx][this link]] then *Save Link As* to save this evaluation template into your homedrive.
+- Right click [[./doc/Cryptography-EndofUnitEvaluation.docx][this link]] then *Save Link As* to save this evaluation template into your homedrive.
 - Open the downloaded template in Word.
 - Follow the instructions on the template to finish your self evaluation.
   - Under each heading/learning strand, evaluate the following:
