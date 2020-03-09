@@ -8,7 +8,7 @@
 #+TITLE: Cryptography
 #+AUTHOR: Clinton Delport
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
       <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
@@ -26,7 +26,7 @@
 
     </ul>
   </div>
-#+END_HTML
+#+END_EXPORT
 * COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -144,9 +144,9 @@
   print('A'+'B')
 #+END_SRC
 =Click on the Run to start the trinket=
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 <iframe src="https://trinket.io/embed/python/f99d6c2127?outputOnly=true&runOption=console&runMode=console" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-#+END_HTML
+#+END_EXPORT
 
 ** Badge It - Silver
 :PROPERTIES:
@@ -295,7 +295,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- With reference to the code you've written, explain in your own words when and why some of the commands are repeated within the for loop and others are only run once.
+- With reference to the code you've written after you have followed the above step by step instructions, explain in your own words when and why some of the commands are repeated within the for loop and others are only run once. Use [[./doc/Week2%20Gold%20Template.docx][this template]] for your answers.
 * Indices
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
