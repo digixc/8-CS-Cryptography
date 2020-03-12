@@ -6,7 +6,7 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Clinton Delport
+#+AUTHOR: Xiaohui Ellis
 
 #+BEGIN_EXPORT html
   <div class="github-fork-ribbon-wrapper left">
@@ -130,7 +130,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Have a go at writing the lines of code that are written below into the shell.
+- Have a go at writing the lines of code that are written below into the trinket shell.
 #+BEGIN_SRC python
   print(Hello World!)
   print('Hello World!')
@@ -143,10 +143,11 @@
   print('A+B')
   print('A'+'B')
 #+END_SRC
-=Click on the Run to start the trinket=
+=Follow the instructions in the following trinket Python shell=
 #+BEGIN_EXPORT html
-<iframe src="https://trinket.io/embed/python/f99d6c2127?outputOnly=true&runOption=console&runMode=console" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/5900b03cac?runMode=console" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 #+END_EXPORT
+
 
 ** Badge It - Silver
 :PROPERTIES:
