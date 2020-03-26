@@ -6,9 +6,9 @@
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil
 
 #+TITLE: Cryptography
-#+AUTHOR: Clinton Delport
+#+AUTHOR: X Ellis
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
       <a href="https://github.com/stsb11/8-CS-Cryptography">Fork me on GitHub</a>
@@ -26,7 +26,7 @@
 
     </ul>
   </div>
-#+END_HTML
+#+END_EXPORT
 * COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -96,10 +96,10 @@
 :HTML_CONTAINER_CLASS: activity
 :END:
 ** Learn It
-[[./img/encrypt.jpg]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
+[[./img/encrypt.jpg]]
 - Cryptography is not just for spies and secret agents. We all use cryptography, every day.
 - There are lots of apps and websites that use cryptography to communicate between clients and servers.
 - Public Key Cryptography is very complicated, but here is a quick outline of how it works.
@@ -110,11 +110,16 @@
   5. The server decrypts the /session key/ with it's private key.As only the server has the private key, only it can decrypt the session key.
   6. Now only the client and server have the unique session key. They can use this to encrypt data and send it between them, knowing only the client and server can decrypt the messages
 - SSL/TLS is incredibly important. It's used on all the major social networks, lots of email services and also when we conduct financial transactions online.
-** Design It
+- Here is a video to help you understand how the web using SSL/TLS to secure communication:
+#+BEGIN_EXPORT html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4nGrOpo0Cuc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+END_EXPORT
+** Badget It - Silver
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: design
+:HTML_CONTAINER_CLASS: silver
 :END:
 - Draw a diagram to show how SSL/TLS encryption works, using the characters Alice, Bob and Eve.
+- You can use a piece of paper or Paint.
 - Here's an example of the type of diagram, although this is just for basic encryption.
 [[https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Asymmetric_cryptography_-_step_2.svg/640px-Asymmetric_cryptography_-_step_2.svg.png]]
 * The encryption debate
@@ -151,18 +156,6 @@
   1. [[http://en.wikipedia.org/wiki/Cryptocat][Cryptocat]]
   2. [[http://en.wikipedia.org/wiki/Silent_Circle_%28software%29][Silent Circle]]
   3. [[http://en.wikipedia.org/wiki/TextSecure][TextSecure]]
-- And here is a score card produced by [[https://www.eff.org/][The EFF]] rating the featured messaging apps, with regards to privacy.
-[[file:img/scorecard.png]]
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-- Look at the [[https://www.eff.org/secure-messaging-scorecard][original EFF score card]] by clicking on the link.
-- List all the apps that you use.
-- Next to each app, write down the number of ticks that each app gets.
-- Count up all the ticks, and divide by the number of apps you use.
-- What is the average privacy score for the apps you use?
-- Write a brief paragraph evaluating how private you think your messages are.
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -174,7 +167,7 @@
 Are we going to allow a means of communications which it simply isn’t possible to read?
 My answer to that question is: No, we must not.
 #+END_QUOTE
-- Your overall badge (*silver*, *gold* or *platinum*) will be assigned based on the quality of your response.
+- Your overall badge (*gold* or *platinum*) will be assigned based on the quality of your response.
 
 
    1. Write a brief description of what you think he means by 'allow a means of communications which it simply isn't possible to read'
